@@ -1,0 +1,29 @@
+.divMainFooter {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.MainFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 1384px;
+  height: 98px;
+  background: #e0fff9;
+  border-radius: 15px;
+}
+
+.iconsMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+.textIcon {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
