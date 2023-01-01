@@ -1,0 +1,72 @@
+.divMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60rem;
+}
+
+.mainPageHome {
+  width: 1384px;
+  height: 58rem;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
+
+.mainPageHome::-webkit-scrollbar {
+  width: 0;
+}
+
+.divOneGroup {
+  background-color: #f7faf9;
+  direction: rtl;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.subjectGroup {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 1rem;
+  color: #16cef7;
+}
+
+.oneProductDiv {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 20rem;
+}
+
+.ImgProducts {
+  width: 6rem;
+}
+
+.explainProduct {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.explainPriceCount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CounterPluse {
+  background-color: #665bf7;
+  padding: 0.25rem 0.5rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5px;
+}
