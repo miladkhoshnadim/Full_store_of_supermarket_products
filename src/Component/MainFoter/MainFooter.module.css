@@ -1,29 +1,78 @@
-.divMainFooter {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+@media all and (min-width: 1030px) {
+  .divMainFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  .MainFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 1026px;
+    height: 60px;
+    background: #e0fff9;
+    border-radius: 15px;
+  }
+
+  .iconsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+
+  .textIcon {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 20px; */
+  }
+
+  .IconsImg {
+    width: 30px;
+  }
+
 }
 
-.MainFooter {
-  display: flex;
-  justify-content: space-between;
-  width: 1384px;
-  height: 98px;
-  background: #e0fff9;
-  border-radius: 15px;
-}
+/****************************************/
 
-.iconsMain {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 3rem;
-}
+@media all and (min-width: 320px) and (max-width: 1030px) {
+  .divMainFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+  }
 
-.textIcon {
-  font-family: "Vazir";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
+  .MainFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    height: 50px;
+    background: #e0fff9;
+    border-radius: 5px;
+  }
+
+  .iconsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0.8rem;
+  }
+
+  .textIcon {
+    font-family: "Vazir";
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 10px;
+  }
+
+  .IconsImg {
+    width: 20px;
+  }
 }

@@ -1,0 +1,57 @@
+@media all and (min-width: 1030px) {
+  .MainDisplay {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+  }
+
+  .MainFooterSection {
+    display: flex;
+    justify-content: right;
+    /* align-items: center; */
+    width: 1026px;
+    border-radius: 10px;
+    background-color: rgb(116, 114, 114);
+    color: white;
+    height: 130px;
+    padding: 10px;
+  }
+
+  .DivFooterRight {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+
+/*************************************************/
+
+@media all and (min-width: 320px) and (max-width: 1030px) {
+  .MainDisplay {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .MainFooterSection {
+    display: flex;
+    justify-content: right;
+    /* align-items: center; */
+    width: 320px;
+    border-radius: 5px;
+    background-color: rgb(116, 114, 114);
+    color: white;
+    height: 70px;
+    padding: 5px;
+  }
+
+  .DivFooterRight {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+  }
+}

@@ -8,15 +8,15 @@ export const MainFooter = () => {
     <div className={StyleFooter.divMainFooter}>
       <div className={StyleFooter.MainFooter}>
         <div className={StyleFooter.iconsMain}>
-          <img src={basketImg} />
+          <img className={StyleFooter.IconsImg} src={basketImg} />
           <span className={StyleFooter.textIcon}>سبد خرید</span>
         </div>
         <div className={StyleFooter.iconsMain}>
-          <img src={SqureImg} />
+          <img className={StyleFooter.IconsImg} src={SqureImg} />
           <span className={StyleFooter.textIcon}>دسته بندی</span>
         </div>
         <div className={StyleFooter.iconsMain}>
-          <img src={HomeImg} />
+          <img className={StyleFooter.IconsImg} src={HomeImg} />
           <span className={StyleFooter.textIcon}>خانه</span>
         </div>
       </div>

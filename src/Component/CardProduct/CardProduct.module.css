@@ -1,0 +1,109 @@
+@media all and (min-width: 1030px) {
+  .oneProductDiv {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    /* width: 310px; */
+    cursor: pointer;
+    height: 70px;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .DivImgProduct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ImgProducts {
+    width: 50px;
+  }
+
+  .explainProduct {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 1.2rem; */
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+    /* width: 150px; */
+  }
+
+  .explainPriceCount {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .PriceWith {
+    width: 140px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .CounterPluse {
+    background-color: #665bf7;
+    padding: 3px 6px;
+    font-weight: 900;
+    /* font-size: 1.5rem; */
+    color: white;
+    border-radius: 5px;
+  }
+}
+
+/*************************************************/
+
+@media all and (min-width: 320px) and (max-width: 1030px) {
+  .oneProductDiv {
+    display: flex;
+    gap: 0.4rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* width: 150px; */
+    cursor: pointer;
+  }
+
+  .ImgProducts {
+    width: 3rem;
+  }
+
+  .explainProduct {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.6rem;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .explainPriceCount {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .PriceWith {
+    width: 4rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .CounterPluse {
+    background-color: #665bf7;
+    padding: 0.18rem 0.3rem 0.12rem;
+    font-weight: 900;
+    font-size: 0.7rem;
+    color: white;
+    border-radius: 5px;
+  }
+}

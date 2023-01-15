@@ -1,72 +1,257 @@
-.divMain {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 60rem;
+@media all and (min-width: 1030px) {
+  .divMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .mainPageHome {
+    width: 1026px;
+    /* height: 58rem; */
+    border-radius: 15px;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    padding: 139px 0 65px;
+  }
+
+  .mainPageHome::-webkit-scrollbar {
+    width: 0;
+    /* height: 0;
+    padding: 0; */
+  }
+
+  .MainImgPageHome {
+    width: 1026px;
+    height: 70px;
+  }
+
+  .divOneGroup {
+    background-color: #f7faf9;
+    direction: rtl;
+    margin: 5px 0;
+    padding: 10px 10px 0;
+    border-radius: 10px;
+  }
+
+  .subjectGroup {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 700;
+    /* font-size: 18px; */
+    margin-bottom:10px;
+    color: #16cef7;
+    cursor: pointer;
+  }
+
+  .oneProductDiv {
+    display: flex;
+    gap: 0.7rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 332px;
+    cursor: pointer;
+  }
+
+  .ImgProducts {
+    width: 6rem;
+  }
+
+  .explainProduct {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .explainPriceCount {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .CounterPluse {
+    background-color: #665bf7;
+    padding: 0.25rem 0.5rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .OneGroupSection {
+    display: flex;
+    justify-content: right;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 8px;
+    width: 1300px;
+  }
+
+  .OneGroupSection::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .PriceWith {
+    width: 8rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .WithScorollDiv {
+    /* padding: 0 3.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ClickScuroll {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .ClickScuroll:hover {
+    background-color: rgb(205, 206, 205);
+  }
+
+  .moreThanImg {
+    width: 20px;
+  }
+
 }
 
-.mainPageHome {
-  width: 1384px;
-  height: 58rem;
-  border-radius: 15px;
-  overflow-y: scroll;
-}
+/*************************************************/
 
-.mainPageHome::-webkit-scrollbar {
-  width: 0;
-}
+@media all and (min-width: 320px) and (max-width: 1030px) {
+  .divMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 60rem; */
+    padding: 5px 0;
+  }
 
-.divOneGroup {
-  background-color: #f7faf9;
-  direction: rtl;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 15px;
-}
+  .mainPageHome {
+    width: 280px;
+    /* height: 58rem; */
+    border-radius: 5px;
+    overflow-y: scroll;
+    padding: 84px 0 50px;
+  }
 
-.subjectGroup {
-  font-family: "Vazir";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  margin-bottom: 1rem;
-  color: #16cef7;
-}
+  .mainPageHome::-webkit-scrollbar {
+    width: 0;
+  }
 
-.oneProductDiv {
-  display: flex;
-  gap: 1rem;
-  background-color: white;
-  border-radius: 1rem;
-  padding: 1rem;
-  width: 20rem;
-}
+  .MainImgPageHome {
+    width: 277px;
+  }
 
-.ImgProducts {
-  width: 6rem;
-}
+  .divOneGroup {
+    background-color: #f7faf9;
+    direction: rtl;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+  }
 
-.explainProduct {
-  font-family: "Vazir";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+  .subjectGroup {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 0.4rem;
+    color: #16cef7;
+    cursor: pointer;
+  }
 
-.explainPriceCount {
-  display: flex;
-  justify-content: space-between;
-}
+  .oneProductDiv {
+    display: flex;
+    gap: 0.7rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 332px;
+    cursor: pointer;
+  }
 
-.CounterPluse {
-  background-color: #665bf7;
-  padding: 0.25rem 0.5rem;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white;
-  border-radius: 5px;
+  .ImgProducts {
+    width: 6rem;
+  }
+
+  .explainProduct {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .explainPriceCount {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .CounterPluse {
+    background-color: #665bf7;
+    padding: 0.25rem 0.5rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .OneGroupSection {
+    display: flex;
+    justify-content: right;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 0.5rem;
+    /* width: 1300px; */
+  }
+
+  .OneGroupSection::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .PriceWith {
+    width: 8rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .WithScorollDiv {
+    /* padding: 0 3.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ClickScuroll {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .ClickScuroll:hover {
+    background-color: rgb(205, 206, 205);
+  }
+
+  .moreThanImg {
+    width: 15px;
+  }
 }
