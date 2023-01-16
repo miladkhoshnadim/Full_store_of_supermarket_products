@@ -1,6 +1,8 @@
 import  CardProductStyle  from "./CardProduct.module.css";
 
 export const CardProduct = ({ item }) => {
+
+  console.log('item.img',item.img )
   return (
     <div className={CardProductStyle.oneProductDiv}>
       <div className={CardProductStyle.DivImgProduct} >

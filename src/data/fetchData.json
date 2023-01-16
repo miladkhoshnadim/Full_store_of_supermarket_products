@@ -2,7 +2,7 @@
   "Products": [
     {
       "id": 1,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "مهگل",
       "Lable": " کره گیاهی مهگل چرب",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "غنچه",
       "Lable": "کره گیهی غنچه",
@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "عالیس",
       "Lable": "دوغ شیشه ای کم چرب عالیس ",
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "عالیس",
       "Lable": "دوغ نایلونی کم چرب عالیس ",
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "میهن",
       "Lable": "شکلاتی خامه میهن ",
@@ -52,7 +52,7 @@
     },
     {
       "id": 6,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "میهن",
       "Lable": " خامه میهن ",
@@ -62,7 +62,7 @@
     },
     {
       "id": 7,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "ضدعفونی کننده",
       "group": "Cleaner",
       "brand": "اکتیو",
       "Lable": "مایع بوگیر خوب اکتیو ",
@@ -72,7 +72,7 @@
     },
     {
       "id": 8,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "کوکومی",
       "Lable": "گوشک نوزاد کوکومی سایز5",
@@ -82,7 +82,7 @@
     },
     {
       "id": 9,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "کوکومی",
       "Lable": "پوشک نوزاد مای بی بی ",
@@ -92,7 +92,7 @@
     },
     {
       "id": 10,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "شکوفه",
       "Lable": "دستمال لطیف 100 برگ",
@@ -102,7 +102,7 @@
     },
     {
       "id": 11,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "شکوفه",
       "Lable": "دستمال لطیف 10 بسته",
@@ -112,7 +112,7 @@
     },
     {
       "id": 12,
-      "Category": "خوراکی",
+      "CategoryFarsi": "خواروبار",
       "group": "Grocery",
       "brand": "ابرار",
       "Lable": "قند ابرار 10 کیلویی اقتصادی",
@@ -122,7 +122,7 @@
     },
     {
       "id": 13,
-      "Category": "خوراکی",
+      "CategoryFarsi": "حبوبات",
       "group": "beans",
       "brand": "آذوقه",
       "Lable": "لپه آذوقه زودپز",
@@ -132,7 +132,7 @@
     },
     {
       "id": 14,
-      "Category": "خوراکی",
+      "CategoryFarsi": "حبوبات",
       "group": "beans",
       "brand": "آذوقه",
       "Lable": "لوبیا آذوقه چیتی",
@@ -142,7 +142,7 @@
     },
     {
       "id": 15,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "ماهوش",
       "Lable": "شیر پرچرب ماهوش",
@@ -152,7 +152,7 @@
     },
     {
       "id": 16,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "ماهوش",
       "Lable": " شیر کم چرب ماهوش",
@@ -162,7 +162,7 @@
     },
     {
       "id": 17,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "ماهوش",
       "Lable": "شیر پرچرب ماهوش 6 عددی",
@@ -172,7 +172,7 @@
     },
     {
       "id": 18,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "ماهوش",
       "Lable": "شیر کاکائو پرچرب ماهوش",
@@ -182,7 +182,7 @@
     },
     {
       "id": 19,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "ماهوش",
       "Lable": "شیر کاکائو کم چرب ماهوش",
@@ -192,7 +192,7 @@
     },
     {
       "id": 20,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "پگاه",
       "Lable": "شیر کم چرب پگاه",
@@ -202,7 +202,7 @@
     },
     {
       "id": 21,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "همت",
       "Lable": "پوشک بچچه همت",
@@ -212,7 +212,7 @@
     },
     {
       "id": 22,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "سلولزی و بهداشتی",
       "group": "celolozy",
       "brand": "پنبه ریز",
       "Lable": "گنبه نرم و لطیف و رنگی",
@@ -222,7 +222,7 @@
     },
     {
       "id": 23,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "ضدعفونی کننده",
       "group": "Cleaner",
       "brand": "گلرنگ",
       "Lable": "مایع ضدعونی کننده گلرنگ بزرگ",
@@ -232,7 +232,7 @@
     },
     {
       "id": 24,
-      "Category": "غیرخوراکی",
+      "CategoryFarsi": "ضدعفونی کننده",
       "group": "Cleaner",
       "brand": "گلرنگ",
       "Lable": "مایع ضدعونی کننده گلرنگ کوچک",
@@ -242,8 +242,8 @@
     },
     {
       "id": 25,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "بهار",
       "Lable": " Grocery بهار الماس مشتی",
       "img": "images/oil1.jpg",
@@ -252,8 +252,8 @@
     },
     {
       "id": 26,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "بهار",
       "Lable": " Grocery حیوانی اعلا مشتی",
       "img": "images/oil2.jpg",
@@ -262,7 +262,7 @@
     },
     {
       "id": 27,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "لبنه",
       "Lable": "پنیر پگاه خوب اعلا",
@@ -272,7 +272,7 @@
     },
     {
       "id": 28,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "لبنه",
       "Lable": "پنیر لبنه پرچرب اعلا",
@@ -282,7 +282,7 @@
     },
     {
       "id": 29,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "صباح",
       "Lable": "پنیر صباح لاکتیکی",
@@ -292,7 +292,7 @@
     },
     {
       "id": 30,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "پگاه",
       "Lable": "پنیر کم چرب پگاه",
@@ -302,7 +302,7 @@
     },
     {
       "id": 31,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "پگاه",
       "Lable": "پنیر پر چرب پگاه",
@@ -312,7 +312,7 @@
     },
     {
       "id": 32,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "پگاه",
       "Lable": "پنیر کم چرب کوچک",
@@ -322,8 +322,8 @@
     },
     {
       "id": 33,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "زرماکارون",
       "Lable": "پاستاماکارون خیلی عالی",
       "img": "images/pasta1.jpg",
@@ -332,8 +332,8 @@
     },
     {
       "id": 34,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "نانسی",
       "Lable": "رشته آشی نانسی",
       "img": "images/pasta2.jpg",
@@ -342,7 +342,7 @@
     },
     {
       "id": 35,
-      "Category": "خوراکی",
+      "CategoryFarsi": "خواروبار",
       "group": "Grocery",
       "brand": "طبیعت",
       "Lable": "برنج طبیعت شمالی",
@@ -352,7 +352,7 @@
     },
     {
       "id": 36,
-      "Category": "خوراکی",
+      "CategoryFarsi": "خواروبار",
       "group": "Grocery",
       "brand": "محسن",
       "Lable": "برنج محسن هندی ",
@@ -362,8 +362,8 @@
     },
     {
       "id": 37,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "روژین",
       "Lable": "رب روژین قرمز",
       "img": "images/rob1.jpg",
@@ -372,8 +372,8 @@
     },
     {
       "id": 38,
-      "Category": "خوراکی",
-      "group": " Grocery",
+      "CategoryFarsi": "خواروبار",
+      "group": "Grocery",
       "brand": "روژین",
       "Lable": "رب روژین زرشکی",
       "img": "images/rob2.jpg",
@@ -382,7 +382,7 @@
     },
     {
       "id": 39,
-      "Category": "خوراکی",
+      "CategoryFarsi": "خواروبار",
       "group": "Grocery",
       "brand": "آذوقه",
       "Lable": "شکر بسته بندی",
@@ -392,7 +392,7 @@
     },
     {
       "id": 40,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "می ماست",
       "Lable": "ماست هم زده پرچرب",
@@ -402,7 +402,7 @@
     },
     {
       "id": 41,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "گاله",
       "Lable": "ماست گاله پرخوب",
@@ -412,7 +412,7 @@
     },
     {
       "id": 42,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "می ماست",
       "Lable": "ماست هم زده دبه ای",
@@ -422,11 +422,21 @@
     },
     {
       "id": 43,
-      "Category": "خوراکی",
+      "CategoryFarsi": "لبنیات",
       "group": "dairy",
       "brand": "گاله",
       "Lable": "ماست گاله کمچرب",
       "img": "images/yoghort5.jpg",
+      "price": "358000",
+      "explain": "this is the best product in univers"
+    },
+    {
+      "id": 44,
+      "CategoryFarsi": "لبنیات",
+      "group": "dairy",
+      "brand": "گاله",
+      "Lable": "ممنیمکنیتکدککمنیمن",
+      "img": "https://alis.ir/en/storage/2020/04/%D8%A8%D8%AF%D9%88%D9%86-%DA%AF%D8%A7%D8%B2.jpg",
       "price": "358000",
       "explain": "this is the best product in univers"
     }

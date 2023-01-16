@@ -1,46 +1,35 @@
 @media all and (min-width: 1030px) {
-  .MainDisplay {
+  .MainSection {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    width: 100%;
-  }
-
-  .MainFooterSection {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-    width: 1026px;
-    border-radius: 10px;
-    background-color: rgb(116, 114, 114);
-    color: white;
-    /* height: 130px; */
-    padding: 10px;
-    font-family: "Vazir";
-    font-size: 12px;
-  }
-
-  .DivContactInformation {
-    display: flex;
-    height: 70px;
-  }
-
-  .DivFooterRight {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 50%;
-  }
-
-  .LocationIcon {
-    width: 25px;
-  }
-
-  .DivSingleInfo {
-    display: flex;
     align-items: center;
-    justify-content: right;
+    width: 100%;
+    padding-top: 15px;
   }
+
+  .MainPageSection {
+    width: 1026px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    padding: 139px 0 65px;
+  }
+
+  .mainPageHome::-webkit-scrollbar {
+    width: 0;
+  }
+
+.ProductsSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #F1FFF4;
+    padding: 10px;
+}
+
+
+
 }
 
 /*************************************************/
