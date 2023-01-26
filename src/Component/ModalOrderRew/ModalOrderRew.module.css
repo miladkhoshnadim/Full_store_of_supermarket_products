@@ -1,0 +1,123 @@
+@media all and (min-width: 1030px) {
+
+    .divModalOrderRew {
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        width: 100%;
+        padding-top: 15px;
+      }
+    
+      .divModalOrderRewSection {
+        width: 650px;
+        border-radius: 15px;
+        /* overflow-y: scroll; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        position: fixed;
+        background-color: aqua;
+      }
+
+
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-family: "Vazir";
+  }
+
+  .textManageOrder {
+    font-weight: 900;
+    font-size: 25px;
+    color: rgb(10, 161, 248);
+  }
+
+  .textDeliverOrder {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-right: 30px;
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .textDeliverOrderActiv {
+    font-weight: 900;
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-right: 30px;
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(29, 245, 65, 0.995) 0%,
+      rgb(58, 250, 52) 50%,
+      rgb(34, 245, 27) 100%
+    );
+    box-shadow: 0px 0px 13px 9px rgba(247, 140, 175, 0.71); /* border: 5px solid red; */
+  }
+
+  .TableSection {
+    margin-top: 15px;
+    padding: 0 50px;
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 900;
+    font-size: 17px;
+    font-family: "Vazir";
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .SpanNameCustomer {
+    width: 35%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanTimeOrder {
+    width: 25%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanPriceFactor {
+    width: 20%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .DivRowTables {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .DivRowOddTables {
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+}
+
+/*************************************************/
+
+@media all and (min-width: 320px) and (max-width: 1030px) {
+}

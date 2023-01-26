@@ -4,6 +4,7 @@ import searchIcon from "./assets/search.png";
 import styleHead from "./mainHeader.module.css";
 import { useContext, useState } from "react";
 import { contexInfo } from "../context/Contex";
+import { Link } from "react-router-dom";
 
 export const MainHeader = () => {
   const information = useContext(contexInfo);
@@ -23,7 +24,12 @@ export const MainHeader = () => {
 
         <div className={styleHead.divLeftHeader}>
           <img className={styleHead.personImg} src={personIcon} />
-          <span className={styleHead.textIncoming}>ثبت نام / مدیریت</span>
+          <span className={styleHead.textIncoming}>
+            ثبت نام /{" "}
+            <Link className="linkStyle" to={`/ManagementLoginPage`}>
+              مدیریت
+            </Link>
+          </span>
         </div>
       </div>
       <div className={styleHead.divInputSearch}>

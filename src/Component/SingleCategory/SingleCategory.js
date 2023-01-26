@@ -62,7 +62,7 @@ export const SingleCategory = ({ Grop }) => {
         </span>
         <div className={SingleCategoryStyle.OneGroupSection} ref={dairyRef}>
           {filterData.map((item, i) => (
-            <CardProduct key={i} item={item} />
+            <CardProduct key={i} item={item} group={Grop[0].group} />
           ))}
         </div>
         <span

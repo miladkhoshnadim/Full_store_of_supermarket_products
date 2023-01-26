@@ -1,0 +1,100 @@
+@media all and (min-width: 1030px) {
+ 
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    font-family: "Vazir";
+  }
+
+  .textManageProduct {
+    font-weight: 900;
+    font-size: 25px;
+    color: rgb(10, 161, 248);
+  }
+
+  .textPutProduct {
+    font-weight: 900;
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .TableSection {
+    margin-top: 15px;
+    padding: 0 50px;
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 900;
+    font-size: 17px;
+    font-family: "Vazir";
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+/* 
+  .SpanImgProducts {
+    width: 10%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  } */
+
+  .SpanNameProducts {
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanPriceProducts {
+    width: 25%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+ 
+  .DivRowTables {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .inputPriceProduct{
+    width: 25%;
+    /* padding: 10px; */
+    align-items: center;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    margin: 0px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aqua;
+  }
+
+  ::-webkit-input-placeholder{
+    color: rgb(255, 11, 72);
+  }
+
+  .DivRowOddTables{
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+}
+
+/*************************************************/
+
+@media all and (min-width: 320px) and (max-width: 1030px) {
+}

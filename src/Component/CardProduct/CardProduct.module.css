@@ -5,8 +5,8 @@
     background-color: white;
     border-radius: 10px;
     padding: 5px;
-    /* width: 310px; */
-    cursor: pointer;
+    width: 220px;
+    /* cursor: pointer; */
     height: 70px;
     /* align-items: center;
     justify-content: center; */
@@ -20,7 +20,6 @@
 
   .ImgProducts {
     width: 50px;
-    height: 50px;
   }
 
   .explainProduct {
@@ -34,6 +33,21 @@
     justify-content: space-around;
     /* width: 150px; */
   }
+
+  .LableProduct {
+    width: 120px;
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* overflow-y: hidden;
+    overflow-x: scroll; */
+  }
+  /* 
+  .LableProduct::-webkit-scrollbar {
+    width: 0;
+  } */
 
   .explainPriceCount {
     display: flex;
@@ -55,6 +69,11 @@
     /* font-size: 1.5rem; */
     color: white;
     border-radius: 5px;
+  }
+
+  .linkStyle {
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 

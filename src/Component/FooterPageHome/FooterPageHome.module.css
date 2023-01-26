@@ -12,7 +12,12 @@
     flex-direction: column;
     width: 1026px;
     border-radius: 10px;
-    background-color: rgb(116, 114, 114);
+    background: radial-gradient(
+      circle,
+      rgba(69, 240, 232, 1) 0%,
+      rgba(246, 239, 124, 1) 100%
+    );
+    /* background-color: rgb(116, 114, 114); */
     color: white;
     /* height: 130px; */
     padding: 10px;
@@ -40,6 +45,30 @@
     display: flex;
     align-items: center;
     justify-content: right;
+  }
+
+  .SpanBackdrundInfo {
+    background: linear-gradient(
+      0deg,
+      rgba(123, 245, 116, 1) 0%,
+      rgba(247, 245, 60, 0.5046393557422969) 100%
+    );
+    padding: 5px;
+    color: rgb(112, 69, 69);
+  }
+
+  .backgrundP {
+    background: linear-gradient(
+      86deg,
+      rgba(17, 247, 225, 1) 0%,
+      rgba(251, 246, 56, 0.804359243697479) 50%,
+      rgba(64, 252, 237, 1) 100%
+    );
+    padding: 5px;
+    text-align: justify;
+    color: rgb(112, 69, 69);
+    font-weight: bold;
+    line-height: 1.5;
   }
 }
 

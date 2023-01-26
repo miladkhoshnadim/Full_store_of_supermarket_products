@@ -13,7 +13,8 @@
     border-radius: 15px;
     overflow-y: scroll;
     /* overflow-x: hidden; */
-    padding: 139px 0 65px;
+    /* padding: 139px 0 65px; */
+    padding: 0px 0 65px;
   }
 
   .mainPageHome::-webkit-scrollbar {
@@ -24,108 +25,8 @@
 
   .MainImgPageHome {
     width: 1026px;
-    height: 70px;
+    /* height: 70px; */
   }
-
-  .divOneGroup {
-    background-color: #f7faf9;
-    direction: rtl;
-    margin: 5px 0;
-    padding: 10px 10px 0;
-    border-radius: 10px;
-  }
-
-  .subjectGroup {
-    font-family: "Vazir";
-    font-style: normal;
-    font-weight: 700;
-    /* font-size: 18px; */
-    margin-bottom:10px;
-    color: #16cef7;
-    cursor: pointer;
-  }
-
-  .oneProductDiv {
-    display: flex;
-    gap: 0.7rem;
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 332px;
-    cursor: pointer;
-  }
-
-  .ImgProducts {
-    width: 6rem;
-  }
-
-  .explainProduct {
-    font-family: "Vazir";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.2rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .explainPriceCount {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .CounterPluse {
-    background-color: #665bf7;
-    padding: 0.25rem 0.5rem;
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: white;
-    border-radius: 5px;
-  }
-
-  .OneGroupSection {
-    display: flex;
-    justify-content: right;
-    overflow-x: scroll;
-    align-items: center;
-    gap: 8px;
-    width: 1300px;
-  }
-
-  .OneGroupSection::-webkit-scrollbar {
-    width: 0;
-  }
-
-  .PriceWith {
-    width: 8rem;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-  }
-
-  .WithScorollDiv {
-    /* padding: 0 3.5rem; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .ClickScuroll {
-    margin-bottom: 15px;
-    cursor: pointer;
-  }
-
-  .ClickScuroll:hover {
-    background-color: rgb(205, 206, 205);
-  }
-
-  .moreThanImg {
-    width: 20px;
-  }
-
 }
 
 /*************************************************/

@@ -8,7 +8,7 @@ export const FooterPageHome = () => {
   return (
     <div className={FooterPageHomeStyle.MainDisplay}>
       <div className={FooterPageHomeStyle.MainFooterSection}>
-        <p>
+        <p className={FooterPageHomeStyle.backgrundP}>
           هایپر مارکت خوش ندیم از سال 1372 آغاز به کار کرد و تجارب ارزشمندی از
           شناخت اصالت و کیفت کالا را داراست و نسخه اپلیکیشن این فروشگاه از سال
           1401 فعالیت خود را آغاز کرده و به دنبال کسب رضایت مشتریان عزیز می
@@ -24,7 +24,9 @@ export const FooterPageHome = () => {
                 src={LocationImg}
                 className={FooterPageHomeStyle.LocationIcon}
               />
-              <span>آدرس: تهران نواب امام خمینی هایپرمارکت خوش ندیم</span>
+              <span className={FooterPageHomeStyle.SpanBackdrundInfo}>
+                آدرس: تهران نواب امام خمینی هایپرمارکت خوش ندیم
+              </span>
             </div>
             <div className={FooterPageHomeStyle.DivSingleInfo}>
               <img
@@ -32,7 +34,9 @@ export const FooterPageHome = () => {
                 src={TeleghonImg}
                 className={FooterPageHomeStyle.LocationIcon}
               />
-              <span>تلفن: 021-66360366</span>
+              <span className={FooterPageHomeStyle.SpanBackdrundInfo}>
+                تلفن: 021-66360366
+              </span>
             </div>
           </div>
 
@@ -43,7 +47,9 @@ export const FooterPageHome = () => {
                 src={EmailImg}
                 className={FooterPageHomeStyle.LocationIcon}
               />
-              <span>ایمیل: miladkhoshnadim1372@gmail.com</span>
+              <span className={FooterPageHomeStyle.SpanBackdrundInfo}>
+                ایمیل: miladkhoshnadim1372@gmail.com
+              </span>
             </div>
             <div className={FooterPageHomeStyle.DivSingleInfo}>
               <img
@@ -51,7 +57,9 @@ export const FooterPageHome = () => {
                 src={mobileImg}
                 className={FooterPageHomeStyle.LocationIcon}
               />
-              <span>مبایل: 09184023194 و 09331037791</span>
+              <span className={FooterPageHomeStyle.SpanBackdrundInfo}>
+                مبایل: 09184023194 و 09331037791
+              </span>
             </div>
           </div>
         </div>

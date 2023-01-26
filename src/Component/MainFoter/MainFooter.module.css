@@ -12,7 +12,15 @@
     justify-content: space-between;
     width: 1026px;
     height: 60px;
-    background: #e0fff9;
+    /* background: #e0fff9; */
+    background: linear-gradient(
+      86deg,
+      rgba(177, 246, 231, 1) 0%,
+      rgba(245, 245, 61, 0.6979166666666667) 25%,
+      rgba(177, 246, 231, 1) 50%,
+      rgba(245, 245, 61, 0.7035189075630253) 75%,
+      rgba(177, 246, 231, 1) 100%
+    );
     border-radius: 15px;
   }
 
@@ -34,7 +42,6 @@
   .IconsImg {
     width: 30px;
   }
-
 }
 
 /****************************************/

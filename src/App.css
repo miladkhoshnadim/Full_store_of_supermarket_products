@@ -123,8 +123,20 @@ table {
   border-spacing: 0;
 }
 
-*{
+* {
   font-family: "Vazir";
   font-style: normal;
   direction: rtl;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.linkStyle {
+  text-decoration: none;
+  cursor: pointer;
 }

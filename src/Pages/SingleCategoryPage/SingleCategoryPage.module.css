@@ -11,25 +11,63 @@
     width: 1026px;
     border-radius: 15px;
     overflow-y: scroll;
-    padding: 139px 0 65px;
+    /* padding: 139px 0 65px; */
+    padding: 0px 0 65px;
+   
   }
 
-  .mainPageHome::-webkit-scrollbar {
+  .MainPageSection::-webkit-scrollbar {
     width: 0;
   }
 
-.ProductsSection{
+  .subjectCategory {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 900;
+
+    color: #16cef7;
+    font-size: 20px;
+    /* cursor: pointer; */
+  }
+
+  .ProductsSection {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #F1FFF4;
+    background-color: #f1fff4;
     padding: 10px;
-}
+    /* min-height: 400px; */
+  }
 
+  .LableSortingsDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 19px 0 10px;
+  }
 
+  .SelectSortingDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
 
+  .SelectSorting {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 3px 30px;
+    /* background-color: blanchedalmond; */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+      86deg,
+      rgba(197, 203, 250, 0.577468487394958) 0%,
+      rgba(241, 219, 219, 1) 51%,
+      rgba(138, 249, 248, 0.3757878151260504) 100%
+    );
+  }
 }
 
 /*************************************************/
