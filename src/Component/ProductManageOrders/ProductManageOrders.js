@@ -1,9 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductManageOrdersstyle from "./ProductManageOrders.module.css";
 import { ModalOrderRew, parseLinkHeader } from "../indexCoponent";
+import { ServiceProducts } from "../../services/Servise";
 
 export const ProductManageOrdersSection = () => {
   const [OrderDelivery, setOrderDelivery] = useState(false);
+  const [ModalShow, setModalShow] = useState(false);
+  const [Products, setProducts] = useState([]);
+  const [EndPageError, setEndPageError] = useState(false);
+  const [ItemModal, setItemModal] = useState({});
+  const [PageNumber, setPageNumber] = useState(1);
+  useEffect(() => {
+    getData();
+  }, [PageNumber, OrderDelivery]);
+
+  function getData(Limit = 6) {
+    fetch(
+      ServiceProducts +
+        `/users?_page=${PageNumber}&_limit=${Limit}&delivered=${OrderDelivery}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.length > 0) {
+          setProducts(data);
+        } else {
+          setPageNumber((prv) => prv - 1);
+          setEndPageError(true);
+          setTimeout(() => {
+            setEndPageError(false);
+          }, 5000);
+        }
+      });
+  }
+
+  function HandelMinesNumberPage() {
+    if (PageNumber > 1) {
+      setPageNumber((prv) => prv - 1);
+    } else {
+      setEndPageError(true);
+      setTimeout(() => {
+        setEndPageError(false);
+      }, 5000);
+    }
+  }
+
+  function HandelShowModal(item) {
+    setItemModal(item);
+    setModalShow(true);
+  }
 
   return (
     <>
@@ -51,39 +95,55 @@ export const ProductManageOrdersSection = () => {
             بررسی سفارش
           </span>
         </div>
-
-        <div className={ProductManageOrdersstyle.DivRowOddTables}>
-          <span className={ProductManageOrdersstyle.SpanNameCustomer}>
-            میلاد
-          </span>
-          <span className={ProductManageOrdersstyle.SpanPriceFactor}>
-            25000
-          </span>
-          <span className={ProductManageOrdersstyle.SpanTimeOrder}>
-            25/02/1401
-          </span>
-          <span className={ProductManageOrdersstyle.SpanPriceFactor}>
-            بررسی سفارش
-          </span>
-        </div>
-
-        <div className={ProductManageOrdersstyle.DivRowTables}>
-          <span className={ProductManageOrdersstyle.SpanNameCustomer}>
-            میلاد
-          </span>
-          <span className={ProductManageOrdersstyle.SpanPriceFactor}>
-            25000
-          </span>
-          <span className={ProductManageOrdersstyle.SpanTimeOrder}>
-            25/02/1401
-          </span>
-          <span className={ProductManageOrdersstyle.SpanPriceFactor}>
-            بررسی سفارش
-          </span>
-        </div>
+        {Products.map((item, i) => (
+          <div
+            className={
+              i % 2 === 0
+                ? ProductManageOrdersstyle.DivRowOddTables
+                : ProductManageOrdersstyle.DivRowTables
+            }
+          >
+            <span className={ProductManageOrdersstyle.SpanNameCustomer}>
+              {item.username}-{item.lastname}
+            </span>
+            <span className={ProductManageOrdersstyle.SpanPriceFactor}>
+              {item.prices}
+            </span>
+            <span className={ProductManageOrdersstyle.SpanTimeOrder}>
+              {item.createdAt}
+            </span>
+            <span
+              className={ProductManageOrdersstyle.SpanRewOrder}
+              onClick={() => HandelShowModal(item)}
+            >
+              بررسی سفارش
+            </span>
+          </div>
+        ))}
       </div>
 
-      <ModalOrderRew/>
+      <div className={ProductManageOrdersstyle.PaginationDiv}>
+        <span
+          className={ProductManageOrdersstyle.PaginationBotton}
+          onClick={HandelMinesNumberPage}
+        >
+          قبلی
+        </span>
+        <span>{PageNumber}</span>
+        <span
+          className={ProductManageOrdersstyle.PaginationBotton}
+          onClick={() => setPageNumber((prv) => prv + 1)}
+        >
+          بعدی
+        </span>
+      </div>
+
+      {EndPageError && (
+        <div className={ProductManageOrdersstyle.PaginationDivError}>
+          آخرین صفحه نمایش داده شد!
+        </div>
+      )}
+      {ModalShow && <ModalOrderRew ItemModal={ItemModal} setModalShow={setModalShow} />}
     </>
   );
 };

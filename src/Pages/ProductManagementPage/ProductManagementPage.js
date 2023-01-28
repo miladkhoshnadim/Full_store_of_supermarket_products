@@ -7,12 +7,35 @@ import {
   ProductManagePriceSection,
   ProductManageSection,
 } from "../../Component/indexCoponent";
+import { Link } from "react-router-dom";
+// import { ServiceProducts } from "../../services/Servise";
 
 export const ProductManagementPage = () => {
   const [treeSection, setTreeSection] = useState([false, false, true]);
+  // const [DataProduct, setDataProduct] = useState([]);
+  // const [DataOrders, setDataOrders] = useState([]);
   useEffect(() => {
     // localStorage.removeItem("userManagement");
+    // getData(5);
   }, []);
+
+  // function getData(Limit = 10, Page = 1, addres = "/Products") {
+  //   fetch(ServiceProducts + `${addres}?_page=${Page}&_limit=${Limit}`)
+  //     // .then((res) =>
+  //     //   setTreeSectionData(parseLinkHeader(res.headers.link))
+  //     // );
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if(addres === "/Products" ){
+  //         setDataProduct(data)
+  //       } else if(addres === "/users"){
+  //         setDataOrders(data)
+  //       }
+
+  //     });
+  // }
+
+  // console.log("!@#", DataProduct);
 
   return (
     <div className={ProductManagementStyle.divMainManagePage}>
@@ -29,10 +52,13 @@ export const ProductManagementPage = () => {
           </div>
 
           <div className={ProductManagementStyle.divLeftHeadManagment}>
-            <img className={ProductManagementStyle.HomeImg} src={Homeimg} />
-            <span className={ProductManagementStyle.textIncoming}>
-              بازگشت به سایت
-            </span>
+            
+              <img className={ProductManagementStyle.HomeImg} src={Homeimg} />
+              <Link className="linkStyle" to={`/`}>
+              <span className={ProductManagementStyle.textIncoming}>
+                بازگشت به سایت
+              </span>
+            </Link>
           </div>
         </div>
 

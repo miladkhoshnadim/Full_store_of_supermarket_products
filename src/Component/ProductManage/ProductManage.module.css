@@ -26,6 +26,17 @@
     );
   }
 
+   .textPutProduct:hover{
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(
+      86deg,
+      rgba(141, 253, 147, 0.995) 0%,
+      rgb(225, 250, 84) 50%,
+      rgb(180, 247, 163) 100%
+    );
+   }
+
   .TableSection {
     margin-top: 15px;
     padding: 0 50px;
@@ -69,6 +80,19 @@
     text-align: center;
   }
 
+  .buttenEditProduct:hover{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: linear-gradient(
+      86deg,
+      rgba(141, 253, 147, 0.995) 0%,
+      rgb(225, 250, 84) 50%,
+      rgb(180, 247, 163) 100%
+    );
+  }
+
   .DivRowTable {
     display: flex;
     background-color: rgb(247, 215, 173);
@@ -79,6 +103,49 @@
     display: flex;
     background-color: rgb(248, 230, 212);
     font-family: "Vazir";
+  }
+
+  .ImgProduct {
+    width: 20px;
+  }
+
+  .PaginationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 40% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+.PaginationDivError{
+  width: 300px;
+  text-align: center;
+    margin: 20px 33% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: rgb(240, 18, 18);
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+}
+
+  .PaginationBotton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 250, 6);
+    font-size: 15px;
+    color: red;
   }
 }
 

@@ -8,4 +8,4 @@ export { ProductManagePriceSection } from "./ProductManagePrice/ProductManagePri
 export { ProductManageOrdersSection } from "./ProductManageOrders/ProductManageOrders";
 export { parseLinkHeader } from "./Functions/FunctionPagination";
 export { ModalOrderRew } from "./ModalOrderRew/ModalOrderRew";
-
+export { ModalProductRew } from "./ModalProductRew/ModalProductRew";

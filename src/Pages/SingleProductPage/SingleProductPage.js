@@ -11,6 +11,8 @@ export const SingleProductPage = () => {
     (x) => x === addresOneProduct[0]
   );
 
+  console.log("InformationContext", InformationContext);
+
   const elem = InformationContext.dataGrops[index].find(
     (el) => el.id == addresOneProduct[1]
   );

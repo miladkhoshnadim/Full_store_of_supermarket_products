@@ -44,6 +44,29 @@
     width: 600px;
   }
 
+  .divInputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    /* font-size: 20px; */
+    width: 500px;
+  }
+
+  .divInputsLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 20px; */
+  }
+
+  .inputsModal{
+    width: 220px;
+    /* border: none; */
+  }
+
+  /**/
   .CloseModal {
     color: red;
     padding: 2px 5px;
@@ -64,7 +87,7 @@
     width: 500px;
   }
 
-  .divFactorModal{
+  .divFactorModal {
     margin-top: 15px;
     font-size: 20px;
     /* display: flex;
@@ -135,7 +158,7 @@
     );
   }
 
-  .divDeliveredDate{
+  .divDeliveredDate {
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;

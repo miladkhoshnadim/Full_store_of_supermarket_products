@@ -81,6 +81,14 @@
     text-align: center;
   }
 
+  .SpanRewOrder {
+    cursor: pointer;
+    width: 20%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
   .DivRowTables {
     display: flex;
     background-color: rgb(247, 215, 173);
@@ -92,6 +100,48 @@
     background-color: rgb(248, 230, 212);
     font-family: "Vazir";
   }
+
+  .PaginationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 40% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+.PaginationDivError{
+  width: 300px;
+  text-align: center;
+    margin: 20px 33% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: rgb(240, 18, 18);
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+}
+
+  .PaginationBotton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 250, 6);
+    font-size: 15px;
+    color: red;
+  }
+
+
+
 }
 
 /*************************************************/
