@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ServiceProducts } from "../../services/Servise";
 import { ModalProductRew } from "../indexCoponent";
 import ProductManagestyle from "./ProductManage.module.css";
+import imgTrash from "../assetsComponents/icons8-trash-can-50.png";
+import imgEdit from "../assetsComponents/icons8-pencil-50.png";
 
 export const ProductManageSection = () => {
   const [Products, setProducts] = useState([]);
@@ -92,18 +94,13 @@ export const ProductManageSection = () => {
               {item.CategoryFarsi}
             </span>
             <div className={ProductManagestyle.SpanEditProduct}>
-              <span
-                className={ProductManagestyle.buttenEditProduct}
+              <img
                 onClick={() => HandelEditFunction(item)}
-              >
-                {" "}
-                ویرایش{" "}
-              </span>{" "}
-              /{" "}
-              <span className={ProductManagestyle.buttenEditProduct}>
-                {" "}
-                حذف{" "}
-              </span>
+                src={imgEdit}
+                className={ProductManagestyle.TrashImg}
+              />
+
+              <img src={imgTrash} className={ProductManagestyle.TrashImg} />
             </div>
           </div>
         ))}

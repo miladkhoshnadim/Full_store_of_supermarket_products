@@ -8,17 +8,18 @@ export const ManagementLoginPage = () => {
   const [admin, setAdmin] = useState([]);
   const [Input, setInputs] = useState({});
   const [Error, setError] = useState(false);
+  const [Credit, setCredit] = useState(false);
 
-  useEffect(() => {
-    getData();
-  }, []);
-  function getData() {
-    fetch(ServiceProducts + "/ManagementAconts")
-      .then((res) => res.json())
-      .then((data) => {
-        setAdmin(data);
-      });
-  }
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+  // function getData() {
+  //   fetch(ServiceProducts + "/ManagementAconts")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setAdmin(data);
+  //     });
+  // }
 
   function HandelInputValue(e) {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -27,22 +28,26 @@ export const ManagementLoginPage = () => {
   const navigat = useNavigate();
 
   function HandelEnterManegement() {
-    admin.forEach((Admin) => {
-      if (
-        Admin.username === Input.UserName &&
-        Admin.Password === Input.Password
-      ) {
-        localStorage.setItem("userManagement", true);
-        navigat("/ProductManagementPage");
-      } else {
-        setError(true);
-        setTimeout(() => {
-          setError(false);
-        }, 5000);
-      }
-    });
+    setCredit(true);
+    fetch(
+      ServiceProducts +
+        `/ManagementAconts?&username=${Input.UserName}&Password=${Input.Password}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setCredit(false);
+        if (data.length > 0) {
+          localStorage.setItem("userManagement", true);
+          navigat("/ProductManagementPage");
+        } else {
+          setError(true);
+          setTimeout(() => {
+            setError(false);
+          }, 5000);
+        }
+      });
   }
-  
+
   return (
     <div className={ManagementLoginStyle.divMainLoginPage}>
       <div className={ManagementLoginStyle.mainPageLogin}>
@@ -75,6 +80,9 @@ export const ManagementLoginPage = () => {
             <div className={ManagementLoginStyle.DivError}>
               نام کاربری یا رمز عبو صحیح نمی باشد.
             </div>
+          )}
+          {Credit && (
+            <div className={ManagementLoginStyle.DivCredit}>درحال بررسی...</div>
           )}
         </div>
       </div>

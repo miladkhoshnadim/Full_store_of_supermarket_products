@@ -78,9 +78,20 @@
     padding: 10px;
     align-items: center;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
 
-  .buttenEditProduct:hover{
+/* .buttenEditProduct{
+  text-align: center;
+  display: flex;
+} */
+
+.TrashImg{
+  width: 20px;
+}
+
+  .TrashImg:hover{
     font-size: 20px;
     cursor: pointer;
     padding: 2px 10px;
@@ -147,6 +158,9 @@
     font-size: 15px;
     color: red;
   }
+
+
+
 }
 
 /*************************************************/

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductManageOrdersstyle from "./ProductManageOrders.module.css";
 import { ModalOrderRew, parseLinkHeader } from "../indexCoponent";
 import { ServiceProducts } from "../../services/Servise";
+import ImgMoreInfo from "../assetsComponents/icons8-more-50.png"
 
 export const ProductManageOrdersSection = () => {
   const [OrderDelivery, setOrderDelivery] = useState(false);
@@ -113,10 +114,11 @@ export const ProductManageOrdersSection = () => {
               {item.createdAt}
             </span>
             <span
-              className={ProductManageOrdersstyle.SpanRewOrder}
+              className={ProductManageOrdersstyle.SpanRewOrder }
               onClick={() => HandelShowModal(item)}
             >
-              بررسی سفارش
+              <img className={ProductManageOrdersstyle.MoreInfoImg} src={ImgMoreInfo} />
+              
             </span>
           </div>
         ))}

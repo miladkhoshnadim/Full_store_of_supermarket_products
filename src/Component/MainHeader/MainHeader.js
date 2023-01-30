@@ -25,9 +25,9 @@ export const MainHeader = () => {
         <div className={styleHead.divLeftHeader}>
           <img className={styleHead.personImg} src={personIcon} />
           <span className={styleHead.textIncoming}>
-            ثبت نام /{" "}
+          <span className={styleHead.ButtonManagement}>ثبت نام </span>{" "}
             <Link className="linkStyle" to={`/ManagementLoginPage`}>
-              مدیریت
+              <span className={styleHead.ButtonManagement}>مدیریت</span>{" "}
             </Link>
           </span>
         </div>
