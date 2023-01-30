@@ -13,6 +13,14 @@
     color: rgb(10, 161, 248);
   }
 
+.InputSearchProduct{
+  background-color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid rgb(46, 235, 235);
+}
+
+
   .textPutProduct {
     font-weight: 900;
     font-size: 17px;
@@ -81,7 +89,7 @@
 
   .inputPriceProduct {
     width: 25%;
-    /* padding: 10px; */
+    cursor: pointer;
     align-items: center;
     text-align: center;
     background-color: inherit;
@@ -89,11 +97,11 @@
     margin: 0px 10px;
     font-size: 18px;
     font-weight: bold;
-    color: aqua;
+    color: rgb(252, 54, 103);
   }
 
   ::-webkit-input-placeholder {
-    color: rgb(255, 11, 72);
+    color: rgb(90, 65, 71);
   }
 
   input::-webkit-outer-spin-button,
@@ -146,6 +154,19 @@
     font-size: 15px;
     color: red;
   }
+
+.divLoding{
+  margin: 100px 300px 0 0;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(127, 240, 240);
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(105, 85, 194);
+}
+
 }
 
 /*************************************************/

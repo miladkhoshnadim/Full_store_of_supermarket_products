@@ -5,7 +5,7 @@ import { ServiceProducts } from "../../services/Servise";
 import ManagementLoginStyle from "./ManagementLoginPage.module.css";
 
 export const ManagementLoginPage = () => {
-  const [admin, setAdmin] = useState([]);
+  // const [admin, setAdmin] = useState([]);
   const [Input, setInputs] = useState({});
   const [Error, setError] = useState(false);
   const [Credit, setCredit] = useState(false);

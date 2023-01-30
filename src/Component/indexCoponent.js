@@ -9,3 +9,4 @@ export { ProductManageOrdersSection } from "./ProductManageOrders/ProductManageO
 export { parseLinkHeader } from "./Functions/FunctionPagination";
 export { ModalOrderRew } from "./ModalOrderRew/ModalOrderRew";
 export { ModalProductRew } from "./ModalProductRew/ModalProductRew";
+export { GetDataFetch } from "./Functions/FanctionGetData";
