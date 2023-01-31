@@ -13,6 +13,13 @@
     color: rgb(10, 161, 248);
   }
 
+  .InputSearchOrder {
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
+
   .textDeliverOrder {
     cursor: pointer;
     font-weight: 900;
@@ -29,13 +36,12 @@
     );
   }
 
-  .textDeliverOrder:hover{
-    font-size: 25px;
+  .textDeliverOrder:hover {
+    font-size: 18px;
     box-shadow: 0px 0px 10px 9px rgba(73, 71, 72, 0.71);
-  
   }
 
-  .textDeliverOrderActiv{
+  .textDeliverOrderActiv {
     font-weight: 900;
     font-size: 17px;
     border-radius: 10px;
@@ -48,7 +54,7 @@
       rgb(58, 250, 52) 50%,
       rgb(34, 245, 27) 100%
     );
-    box-shadow: 0px 0px 13px 9px rgba(247, 140, 175, 0.71);/* border: 5px solid red; */
+    box-shadow: 0px 0px 13px 9px rgba(247, 140, 175, 0.71); /* border: 5px solid red; */
   }
 
   .TableSection {
@@ -65,7 +71,7 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
-  
+
   .SpanNameCustomer {
     width: 35%;
     padding: 10px;
@@ -102,14 +108,14 @@
     text-align: center;
   }
 
-.MoreInfoImg{
-  width: 20px;
-  /* box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71); */
-}
+  .MoreInfoImg {
+    width: 20px;
+    /* box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71); */
+  }
 
-.MoreInfoImg:hover{
-  width: 25px;
-  background: linear-gradient(
+  .MoreInfoImg:hover {
+    width: 25px;
+    background: linear-gradient(
       86deg,
       rgba(243, 205, 123, 0.995) 0%,
       rgb(147, 247, 144) 50%,
@@ -117,10 +123,9 @@
     );
     border-radius: 10px;
     padding: 2px 5px;
-  /* background-color: aqua; */
-  /* box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71); */
-
-}
+    /* background-color: aqua; */
+    /* box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71); */
+  }
 
   .DivRowTables {
     display: flex;
@@ -150,9 +155,9 @@
     );
   }
 
-.PaginationDivError{
-  width: 300px;
-  text-align: center;
+  .PaginationDivError {
+    width: 300px;
+    text-align: center;
     margin: 20px 33% 0;
     padding: 10px 20px;
     font-weight: bold;
@@ -164,7 +169,7 @@
       rgba(119, 248, 229, 1) 50%,
       rgb(244, 247, 163) 100%
     );
-}
+  }
 
   .PaginationBotton:hover {
     cursor: pointer;
@@ -173,8 +178,17 @@
     color: red;
   }
 
-
-
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
 }
 
 /*************************************************/

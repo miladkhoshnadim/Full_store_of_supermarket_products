@@ -13,6 +13,13 @@
     color: rgb(10, 161, 248);
   }
 
+  .InputSearchProduct {
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
+
   .textPutProduct {
     font-weight: 900;
     font-size: 17px;
@@ -26,7 +33,7 @@
     );
   }
 
-   .textPutProduct:hover{
+  .textPutProduct:hover {
     font-size: 20px;
     cursor: pointer;
     background: linear-gradient(
@@ -35,7 +42,7 @@
       rgb(225, 250, 84) 50%,
       rgb(180, 247, 163) 100%
     );
-   }
+  }
 
   .TableSection {
     margin-top: 15px;
@@ -82,16 +89,16 @@
     justify-content: space-around;
   }
 
-/* .buttenEditProduct{
+  /* .buttenEditProduct{
   text-align: center;
   display: flex;
 } */
 
-.TrashImg{
-  width: 20px;
-}
+  .TrashImg {
+    width: 20px;
+  }
 
-  .TrashImg:hover{
+  .TrashImg:hover {
     font-size: 20px;
     cursor: pointer;
     padding: 2px 10px;
@@ -136,9 +143,9 @@
     );
   }
 
-.PaginationDivError{
-  width: 300px;
-  text-align: center;
+  .PaginationDivError {
+    width: 300px;
+    text-align: center;
     margin: 20px 33% 0;
     padding: 10px 20px;
     font-weight: bold;
@@ -150,7 +157,7 @@
       rgba(119, 248, 229, 1) 50%,
       rgb(244, 247, 163) 100%
     );
-}
+  }
 
   .PaginationBotton:hover {
     cursor: pointer;
@@ -159,8 +166,17 @@
     color: red;
   }
 
-
-
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
 }
 
 /*************************************************/

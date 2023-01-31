@@ -1,6 +1,33 @@
+import { useState } from "react";
+import { ServiceProducts } from "../../services/Servise";
 import ModalOrderRewstyle from "./ModalOrderRew.module.css";
 
 export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
+  const [Delivering, setDelivering] = useState(false);
+  const [Delivered, setDelivered] = useState(false);
+
+  function HandelDeliveredOrders() {
+    setDelivering(true);
+    fetch(ServiceProducts + `/users/${ItemModal.id}`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+      body: JSON.stringify({
+        delivered: "true",
+      }),
+    }).then(() => {
+      setDelivering(false);
+      setDelivered(true);
+      setTimeout(() => {
+        setDelivered(false);
+        setModalShow(false);
+      }, 5000);
+      
+    });
+  }
+
   return (
     <>
       <div
@@ -39,10 +66,7 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
             <span>زمان سفارش:</span>
             {ItemModal.createdAt}
           </div>
-          <div className={ModalOrderRewstyle.divFactorModal}>
-          فاکتور خرید
-            
-          </div>
+          <div className={ModalOrderRewstyle.divFactorModal}>فاکتور خرید</div>
           <div className={ModalOrderRewstyle.TableSection}>
             <div className={ModalOrderRewstyle.DivHeadTableModal}>
               <span className={ModalOrderRewstyle.NameProductModal}>
@@ -78,8 +102,21 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
               {ItemModal.expectAt}
             </div>
           ) : (
-            <div className={ModalOrderRewstyle.ButtenDeliveredModal}>
+            <div
+              className={ModalOrderRewstyle.ButtenDeliveredModal}
+              onClick={HandelDeliveredOrders}
+            >
               تحویل شد
+            </div>
+          )}
+          {Delivering && (
+            <div className={ModalOrderRewstyle.DeliveringDiv}>
+              در حال ثبت تحویل شد...
+            </div>
+          )}
+          {Delivered && (
+            <div className={ModalOrderRewstyle.DeliveringDiv}>
+              با موفقیت ثبت شد ...
             </div>
           )}
         </div>

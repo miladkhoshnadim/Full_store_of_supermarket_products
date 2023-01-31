@@ -23,7 +23,7 @@ export const ProductManagePriceSection = () => {
     // fetch(ServiceProducts + `/Products?_page=${PageNumber}&_limit=${Limit}`)
     fetch(
       ServiceProducts +
-        `/Products?_page=${PageNumber}&_limit=${Limit}&Lable_like=${SearchInput}`
+        `/Products?_page=${PageNumber}&_limit=${Limit}&q=${SearchInput}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -58,7 +58,7 @@ export const ProductManagePriceSection = () => {
         </span>
         <input
           className={ProductManagePricestyle.InputSearchProduct}
-          placeholder="جست و جو نام کالا"
+          placeholder="جست و جو "
           onChange={(e) => HandelSerchProduct(e)}
         />
         <span className={ProductManagePricestyle.textPutProduct}>

@@ -526,8 +526,8 @@
       "address": "تهران نوابان  ",
       "phone": "09032855606",
       "expectAt": "1401/11/09",
-      "prices": 938000,
-      "delivered": "false",
+      "prices": 10275000,
+      "delivered": "true",
       "createdAt": "1401/11/07",
       "id": 2,
       "products": [
@@ -536,7 +536,7 @@
           "count": "1",
           "name": "ماست هم زده دبه ای",
           "image": "https://api.snapp.market/media/cache/product-variation_image_thumbnail/uploads/images/vendors/users/app/6321c84856871.jpg",
-          "price": "580000"
+          "price": "585000"
         },
         {
           "id": 43,
@@ -553,7 +553,7 @@
       "address": "نواب آزادی ",
       "phone": "09182855606",
       "expectAt": "1401/11/09",
-      "prices": 895000,
+      "prices": 10275000,
       "delivered": "false",
       "createdAt": "1401/11/01",
       "id": 3,
@@ -570,7 +570,7 @@
           "count": "1",
           "name": "!بهترین دوغ غرب آسیا",
           "image": "https://alis.ir/en/storage/2020/04/%D8%A8%D8%AF%D9%88%D9%86-%DA%AF%D8%A7%D8%B2.jpg",
-          "price": "310000"
+          "price": "308000"
         }
       ]
     },
@@ -580,8 +580,8 @@
       "address": "تهران میدان آزادی ",
       "phone": "09032855606",
       "expectAt": "1401/11/06",
-      "prices": 666000,
-      "delivered": "false",
+      "prices": 10275000,
+      "delivered": "true",
       "createdAt": "1401/11/05",
       "id": 4,
       "products": [
@@ -669,7 +669,7 @@
       "phone": "09032855606",
       "expectAt": "1401/11/09",
       "prices": 905000,
-      "delivered": "true",
+      "delivered": "false",
       "createdAt": "1401/11/08",
       "id": 7,
       "products": [
@@ -709,7 +709,7 @@
       "phone": "09032855606",
       "expectAt": "1401/11/09",
       "prices": 1955000,
-      "delivered": "true",
+      "delivered": "false",
       "createdAt": "1401/11/08",
       "id": 9,
       "products": [
@@ -879,13 +879,8 @@
       ]
     }
   ],
-  "ManagementAconts": [
-    {
-      "id": "1",
-      "username": "Admin",
-      "Password": "Admin"
-    }
-  ],
+
+  "ManagementAconts": [{ "id": "1", "username": "Admin", "Password": "Admin" }],
   "profile": {
     "name": "typicode"
   }

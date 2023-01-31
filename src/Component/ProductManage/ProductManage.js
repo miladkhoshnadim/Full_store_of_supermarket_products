@@ -6,6 +6,7 @@ import imgTrash from "../assetsComponents/icons8-trash-can-50.png";
 import imgEdit from "../assetsComponents/icons8-pencil-50.png";
 
 export const ProductManageSection = () => {
+  const [SearchInput, setSearchInput] = useState("");
   const [Products, setProducts] = useState([]);
   const [EditProduct, setEditProduct] = useState({});
   const [EndPageError, setEndPageError] = useState(false);
@@ -13,20 +14,28 @@ export const ProductManageSection = () => {
   const [PageNumber, setPageNumber] = useState(1);
   useEffect(() => {
     getData();
-  }, [PageNumber]);
+  }, [PageNumber,SearchInput]);
 
   useEffect(() => {
     if (ShowModal === false) setEditProduct({});
   }, [ShowModal]);
 
+  function HandelSerchProduct(e) {
+    setSearchInput(e.target.value);
+  }
+
   function getData(Limit = 5) {
-    fetch(ServiceProducts + `/Products?_page=${PageNumber}&_limit=${Limit}`)
+    fetch(
+      ServiceProducts +
+        `/Products?_page=${PageNumber}&_limit=${Limit}&q=${SearchInput}`
+    )
+    // fetch(ServiceProducts + `/Products?_page=${PageNumber}&_limit=${Limit}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
           setProducts(data);
         } else {
-          setPageNumber((prv) => prv - 1);
+          setPageNumber((prv) => (prv > 1 ? prv - 1 : prv));
           setEndPageError(true);
           setTimeout(() => {
             setEndPageError(false);
@@ -57,7 +66,11 @@ export const ProductManageSection = () => {
         <span className={ProductManagestyle.textManageProduct}>
           مدیریت کالاها
         </span>
-
+        <input
+          className={ProductManagestyle.InputSearchProduct}
+          placeholder="جست و جو "
+          onChange={(e) => HandelSerchProduct(e)}
+        />
         <span
           className={ProductManagestyle.textPutProduct}
           onClick={() => setShowModal(true)}
@@ -65,7 +78,11 @@ export const ProductManageSection = () => {
           افزودن کالا جدید
         </span>
       </div>
-
+      {Products.length < 1 ? (
+        <div className={ProductManagestyle.divLoding}>
+          در حال بارگذاری...
+        </div>
+      ) : (<>
       <div className={ProductManagestyle.TableSection}>
         <div className={ProductManagestyle.DivHeadTable}>
           <span className={ProductManagestyle.SpanImgProduct}>تصویر</span>
@@ -134,6 +151,7 @@ export const ProductManageSection = () => {
           EditProduct={EditProduct}
         />
       )}
+      </>)}
     </>
   );
 };
