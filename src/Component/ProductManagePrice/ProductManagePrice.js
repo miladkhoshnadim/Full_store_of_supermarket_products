@@ -85,7 +85,7 @@ export const ProductManagePriceSection = () => {
             </div>
 
             {Products.map((item, i) => (
-              <div
+              <div key={i}
                 className={
                   i % 2 === 0
                     ? ProductManagePricestyle.DivRowOddTables

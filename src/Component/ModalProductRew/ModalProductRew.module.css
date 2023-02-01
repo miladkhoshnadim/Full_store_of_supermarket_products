@@ -177,6 +177,18 @@
     );
   }
 
+  .TextErrrorInputs{
+    color: rgb(255, 47, 47);
+    margin-top: 40px;
+    font-weight: bold;
+  }
+
+  .TextSucsefullEnter{
+    color: rgb(34, 106, 241);
+    margin-top: 40px;
+    font-weight: bold;
+  }
+
   /**/
   /* .divSubjectSection {
     display: flex;
