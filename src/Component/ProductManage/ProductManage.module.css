@@ -177,6 +177,22 @@
     font-weight: bold;
     color: rgb(105, 85, 194);
   }
+
+  .DivConfirmDelete {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 10px 80px 20px 0px;
+    font-weight: bold;
+    font-family: "Vazir";
+    font-size: 15px;
+    color: rgb(255, 0, 13);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(248, 221, 221);
+  }
 }
 
 /*************************************************/

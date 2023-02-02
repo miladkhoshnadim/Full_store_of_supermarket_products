@@ -9,15 +9,20 @@ export const ProductManageSection = () => {
   const [SearchInput, setSearchInput] = useState("");
   const [Products, setProducts] = useState([]);
   const [EditProduct, setEditProduct] = useState({});
+  const [DeleteProduct, setDeleteProduct] = useState({});
   const [EndPageError, setEndPageError] = useState(false);
   const [ShowModal, setShowModal] = useState(false);
+  const [ItemDeletedShow, setItemDeletedShow] = useState([false, false, false]);
   const [PageNumber, setPageNumber] = useState(1);
   useEffect(() => {
     getData();
   }, [PageNumber, SearchInput]);
 
   useEffect(() => {
-    if (ShowModal === false) setEditProduct({});
+    if (ShowModal === false) {
+      getData();
+      setEditProduct({});
+    }
   }, [ShowModal]);
 
   function HandelSerchProduct(e) {
@@ -60,7 +65,26 @@ export const ProductManageSection = () => {
     setShowModal(true);
   }
 
-  
+  function requestToDelete(item) {
+    setItemDeletedShow([false, false, true]);
+    setDeleteProduct(item);
+    setTimeout(() => {
+      setItemDeletedShow([false, false, false]);
+    }, 9000);
+  }
+
+  function handelDeleteItem(id) {
+    setItemDeletedShow([true, false, false]);
+    fetch(ServiceProducts + `/Products/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      getData();
+      setItemDeletedShow([false, true, false]);
+      setTimeout(() => {
+        setItemDeletedShow([false, false, false]);
+      }, 4000);
+    });
+  }
 
   return (
     <>
@@ -85,6 +109,30 @@ export const ProductManageSection = () => {
       ) : (
         <>
           <div className={ProductManagestyle.TableSection}>
+            {ItemDeletedShow[0] && (
+              <div className={ProductManagestyle.PaginationDivError}>
+                در حال حذف آیتم ...
+              </div>
+            )}
+            {ItemDeletedShow[1] && (
+              <div className={ProductManagestyle.PaginationDivError}>
+                آیتم مورد نظر با موفقیت حذف شد ...!
+              </div>
+            )}
+            {ItemDeletedShow[2] && (
+              <div className={ProductManagestyle.DivConfirmDelete}>
+                آیا می خواهید {DeleteProduct.Lable} حذف شود؟
+                <span onClick={() => handelDeleteItem(DeleteProduct.id)}>
+                  {" "}
+                  بله{" "}
+                </span>
+                <span onClick={() => setItemDeletedShow([false, false, false])}>
+                  {" "}
+                  خیر{" "}
+                </span>
+              </div>
+            )}
+
             <div className={ProductManagestyle.DivHeadTable}>
               <span className={ProductManagestyle.SpanImgProduct}>تصویر</span>
               <span className={ProductManagestyle.SpanNameProduct}>
@@ -98,6 +146,7 @@ export const ProductManageSection = () => {
 
             {Products.map((item, i) => (
               <div
+                key={item.id}
                 className={
                   i % 2 === 0
                     ? ProductManagestyle.DivRowOddTable
@@ -123,7 +172,11 @@ export const ProductManageSection = () => {
                     className={ProductManagestyle.TrashImg}
                   />
 
-                  <img src={imgTrash} className={ProductManagestyle.TrashImg} />
+                  <img
+                    onClick={() => requestToDelete(item)}
+                    src={imgTrash}
+                    className={ProductManagestyle.TrashImg}
+                  />
                 </div>
               </div>
             ))}

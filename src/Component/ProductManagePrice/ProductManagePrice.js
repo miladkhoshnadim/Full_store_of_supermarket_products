@@ -6,6 +6,7 @@ import ProductManagePricestyle from "./ProductManagePrice.module.css";
 export const ProductManagePriceSection = () => {
   const [SearchInput, setSearchInput] = useState("");
   const [Products, setProducts] = useState([]);
+  const [inputs, setInputs] = useState([]);
   const [EndPageError, setEndPageError] = useState(false);
   const [PageNumber, setPageNumber] = useState(1);
   useEffect(() => {
@@ -50,6 +51,11 @@ export const ProductManagePriceSection = () => {
     }
   }
 
+  function handelInputs(e){
+    // setInputs((prv)=> [...prv,[]])
+    console.log(e.target.name,e.target.value )
+  }
+
   return (
     <>
       <div className={ProductManagePricestyle.divSubjectSection}>
@@ -85,7 +91,8 @@ export const ProductManagePriceSection = () => {
             </div>
 
             {Products.map((item, i) => (
-              <div key={i}
+              <div
+                key={i}
                 className={
                   i % 2 === 0
                     ? ProductManagePricestyle.DivRowOddTables
@@ -96,14 +103,20 @@ export const ProductManagePriceSection = () => {
                   {item.Lable}
                 </span>
                 <input
+                  id={item.id}
                   type="number"
                   className={ProductManagePricestyle.inputPriceProduct}
                   placeholder={item.price}
+                  name="price"
+                  onChange={(e) => handelInputs(e)}
                 />
                 <input
+                  id={item.id}
                   type="number"
                   className={ProductManagePricestyle.inputPriceProduct}
                   placeholder={item.inventory}
+                  name="inventory"
+                  onChange={(e) => handelInputs(e)}
                 />
               </div>
             ))}
