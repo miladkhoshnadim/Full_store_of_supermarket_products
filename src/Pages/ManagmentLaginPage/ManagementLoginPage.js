@@ -10,6 +10,12 @@ export const ManagementLoginPage = () => {
   const [Error, setError] = useState(false);
   const [Credit, setCredit] = useState(false);
 
+//   const { result } = getDataFetch({
+//     url: ServiceProducts + "/ManagementAconts",
+//   });
+
+// console.log('result',result )
+
   // useEffect(() => {
   //   getData();
   // }, []);

@@ -8,6 +8,7 @@
   }
 
   .mainPagemanage {
+    /* position: absolute; */
     width: 1026px;
     /* border-radius: 15px; */
     overflow-y: scroll;

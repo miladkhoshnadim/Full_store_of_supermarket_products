@@ -24,7 +24,48 @@
     border-radius: 15px;
   }
 
+  .divModalFooterCategorys{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 61px;
+  }
+
+  .ModalFooterCategorys{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 626px;
+    min-height: 60px;
+    font-family: "Vazir";
+    font-size: 18px;
+    font-weight: 900;
+    background: linear-gradient(
+      86deg,
+      rgba(217, 240, 243, 0.798) 0%,
+      rgba(209, 235, 216, 0.798) 25%,
+      rgba(177, 246, 231, 0.75) 50%,
+      rgba(214, 231, 208, 0.704) 75%,
+      rgba(230, 241, 239, 0.704) 100%
+    );
+    border-radius: 15px;
+    padding: 20px 50px;
+  }
+
+  .MFSingleCategorys{
+    cursor: pointer;
+    background-color: aquamarine;
+    border-radius: 10px;
+    min-width: 300px;
+    text-align: center;
+    padding: 15px 0;
+    color: rgb(8, 8, 155);
+  }
+
   .iconsMain {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

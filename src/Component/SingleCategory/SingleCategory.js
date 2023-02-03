@@ -41,11 +41,11 @@ export const SingleCategory = ({ Grop }) => {
 
   return (
     <div className={SingleCategoryStyle.divOneGroup}>
-      <div className={SingleCategoryStyle.subjectGroup}>
-        <Link to={`/SingleCategoryPage/${Grop[0].group}`}>
+      <Link className="linkStyle" to={`/SingleCategoryPage/${Grop[0].group}`}>
+        <div className={SingleCategoryStyle.subjectGroup}>
           دسته بندی گروه {Grop[0].CategoryFarsi}
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div className={SingleCategoryStyle.WithScorollDiv}>
         <span
           className={SingleCategoryStyle.ClickScuroll}

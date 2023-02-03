@@ -21,7 +21,7 @@ export const ProductManageOrdersSection = () => {
   }
 
   function getData(Limit = 5) {
-    setProducts([]);
+    // setProducts([]);
     fetch(
       ServiceProducts +
         `/users?_page=${PageNumber}&_limit=${Limit}&delivered=${OrderDelivery}&q=${SearchInput}`

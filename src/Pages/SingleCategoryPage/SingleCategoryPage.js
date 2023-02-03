@@ -23,7 +23,8 @@ export const SingleCategoryPage = () => {
       }
     });
     setBrands(newBrands);
-  }, []);
+    setDataCategory(InfoContext.dataGrops[index])
+  }, [CategoryId]);
 
   useEffect(() => {
     const newSearchData = InfoContext.dataGrops[index].filter((item) => {
@@ -57,7 +58,6 @@ export const SingleCategoryPage = () => {
     } else if (e.target.value === "allPrice") {
       setDataCategory(InfoContext.dataGrops[index]);
     }
-    
   }
 
   return (
@@ -89,8 +89,8 @@ export const SingleCategoryPage = () => {
           </div>{" "}
         </div>
         <div className={SingleCategoryStyle.ProductsSection}>
-          {dataCategory.map((item) => (
-            <CardProduct item={item} />
+          {dataCategory.map((item, i) => (
+            <CardProduct key={i} item={item} group={item.group} />
           ))}
         </div>
       </div>
