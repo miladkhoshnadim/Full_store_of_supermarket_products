@@ -21,10 +21,7 @@ export const ProductManageOrdersSection = () => {
   }
 
   function getData(Limit = 5) {
-    // fetch(
-    //   ServiceProducts +
-    //     `/users?_page=${PageNumber}&_limit=${Limit}&delivered=${OrderDelivery}`
-    // );
+    setProducts([]);
     fetch(
       ServiceProducts +
         `/users?_page=${PageNumber}&_limit=${Limit}&delivered=${OrderDelivery}&q=${SearchInput}`
@@ -96,7 +93,9 @@ export const ProductManageOrdersSection = () => {
       </div>
 
       {Products.length < 1 ? (
-        <div className={ProductManageOrdersstyle.divLoding}>در حال بارگذاری...</div>
+        <div className={ProductManageOrdersstyle.divLoding}>
+          در حال بارگذاری...
+        </div>
       ) : (
         <>
           <div className={ProductManageOrdersstyle.TableSection}>

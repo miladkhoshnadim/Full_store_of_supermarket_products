@@ -167,6 +167,23 @@
   color: rgb(105, 85, 194);
 }
 
+.ErrorsDiv{
+  display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 20px 20% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(167, 253, 141, 0.995) 0%,
+      rgb(246, 248, 119) 50%,
+      rgb(163, 230, 247) 100%
+    );
+}
+
 }
 
 /*************************************************/

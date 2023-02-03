@@ -21,7 +21,7 @@ export const ModalProductRew = ({ EditProduct, setShowModal }) => {
       !inputsValue.CategoryFarsi ||
       !inputsValue.price ||
       !inputsValue.explain
-      ) {
+    ) {
       setShowErrors([true, true, false, false]);
       setTimeout(() => {
         setShowErrors([true, false, false, false]);
@@ -48,7 +48,7 @@ export const ModalProductRew = ({ EditProduct, setShowModal }) => {
             CategoryFarsi: `${inputsValue.CategoryFarsi}`,
             group: `${inputsValue.group}`,
             brand: `${inputsValue.brand}`,
-            inventory: `${inputsValue.price}`,
+            inventory: `${inputsValue.inventory}`,
             Lable: `${inputsValue.Lable}`,
             img: `${inputsValue.img}`,
             price: `${inputsValue.price}`,
@@ -70,7 +70,7 @@ export const ModalProductRew = ({ EditProduct, setShowModal }) => {
             CategoryFarsi: `${inputsValue.CategoryFarsi}`,
             group: `${inputsValue.group}`,
             brand: `${inputsValue.brand}`,
-            inventory: `${inputsValue.price}`,
+            inventory: `${inputsValue.inventory}`,
             Lable: `${inputsValue.Lable}`,
             img: `${inputsValue.img}`,
             price: `${inputsValue.price}`,
@@ -86,10 +86,8 @@ export const ModalProductRew = ({ EditProduct, setShowModal }) => {
             setShowModal(false);
           }, 4000);
         });
-
       }
-    }
-    else {
+    } else {
       setShowErrors([true, true, false, false]);
       setTimeout(() => {
         setShowErrors([true, false, false, false]);
