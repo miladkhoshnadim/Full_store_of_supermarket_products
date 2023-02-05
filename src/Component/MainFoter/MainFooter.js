@@ -34,8 +34,12 @@ export const MainFooter = () => {
       <div className={StyleFooter.divMainFooter}>
         <div className={StyleFooter.MainFooter}>
           <div className={StyleFooter.iconsMain}>
-            <img className={StyleFooter.IconsImg} src={basketImg} />
-            <span className={StyleFooter.textIcon}>سبد خرید</span>
+            <Link className="linkStyle" to={`/BascketBuyPage`}>
+              <img className={StyleFooter.IconsImg} src={basketImg} />
+            </Link>
+            <Link className="linkStyle" to={`/BascketBuyPage`}>
+              <span className={StyleFooter.textIcon}>سبد خرید</span>
+            </Link>
           </div>
           <div
             className={StyleFooter.iconsMain}

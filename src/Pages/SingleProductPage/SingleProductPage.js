@@ -13,11 +13,12 @@ export const SingleProductPage = () => {
   const index = InformationContext.GroupName.findIndex(
     (x) => x === addresOneProduct[0]
   );
+  let BasketInventory = [];
 
   useEffect(() => {
     if (index > -1) {
       const Productt = InformationContext.dataGrops[index].find(
-        (el) => el.id === addresOneProduct[1]
+        (el) => el.id == addresOneProduct[1]
       );
       setProduct(Productt);
     } else {
@@ -25,13 +26,59 @@ export const SingleProductPage = () => {
         .then((res) => res.json())
         .then((result) => setProduct(result));
     }
-  },[index, InformationContext.dataGrops, addresOneProduct]);
+    HandelBasketInventory();
+  }, []);
+
+  useEffect(() => {
+    ChengeBascketInventory();
+  }, [counter]);
+
+  function HandelBasketInventory() {
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
+
+    const BasketProductindex = BasketInventory.findIndex(
+      (x) => x.id === addresOneProduct[1]
+    );
+    if (BasketProductindex > -1) {
+      setCounter(BasketInventory[BasketProductindex].count);
+    }
+  }
+
+  function ChengeBascketInventory() {
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
+
+    const BasketProductindex = BasketInventory.findIndex(
+      (x) => x.id === addresOneProduct[1]
+    );
+    if (BasketProductindex > -1 && counter == 0) {
+      BasketInventory = BasketInventory.splice(BasketProductindex, 1);
+    } else if (BasketProductindex > -1) {
+      BasketInventory[BasketProductindex].count = counter;
+    } else if (counter > 0){
+      BasketInventory = [
+        ...BasketInventory,
+        {
+          id: `${Product.id}`,
+          name: `${Product.Lable}`,
+          count: `${counter}`,
+          image: `${Product.img}`,
+          price: `${Product.price}`,
+        },
+      ];
+    }
+    console.log("BasketInventory", BasketInventory);
+    // localStorage.setItem("BasketBuying", JSON.stringify());
+  }
 
   function HandelPlusCounter() {
     if (counter < +Product.inventory) setCounter((prv) => prv + 1);
   }
 
-  function HandelMinesCounter(){
+  function HandelMinesCounter() {
     if (counter > 0) setCounter((prv) => prv - 1);
   }
 
@@ -49,7 +96,8 @@ export const SingleProductPage = () => {
             <div className={SingleProductStyle.MainSingleProductDiv}>
               <div className={SingleProductStyle.ImgSubjectProductDiv}>
                 <div className={SingleProductStyle.DivImg}>
-                  <img alt=""
+                  <img
+                    alt=""
                     className={SingleProductStyle.ImgProduct}
                     src={Product.img}
                   />
@@ -65,16 +113,26 @@ export const SingleProductPage = () => {
                   </span>
                   <div className={SingleProductStyle.DivInventoryPrice}>
                     <div className={SingleProductStyle.CounterDiv}>
-                      <span onClick={HandelPlusCounter} className={SingleProductStyle.PlusSpan}>+</span>
+                      <span
+                        onClick={HandelPlusCounter}
+                        className={SingleProductStyle.PlusSpan}
+                      >
+                        +
+                      </span>
                       <span className={SingleProductStyle.CounterNumber}>
                         {counter}
                       </span>
-                      <span className={SingleProductStyle.MinesSpan} onClick={HandelMinesCounter}>_</span>
+                      <span
+                        className={SingleProductStyle.MinesSpan}
+                        onClick={HandelMinesCounter}
+                      >
+                        _
+                      </span>
                     </div>
                     {counter - Product.inventory === 0 ? (
                       <span>عدم موجودی!</span>
                     ) : (
-                      <span>موجودی {Product.inventory-counter} عدد</span>
+                      <span>موجودی {Product.inventory - counter} عدد</span>
                     )}
                   </div>
                 </div>
