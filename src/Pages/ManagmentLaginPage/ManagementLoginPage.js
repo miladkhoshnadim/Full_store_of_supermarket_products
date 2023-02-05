@@ -1,31 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { getDataFetch } from "../../Component/Functions/FanctionGetData";
+import {  useState } from "react";
+import {  useNavigate } from "react-router-dom";
+
 import { ServiceProducts } from "../../services/Servise";
 import ManagementLoginStyle from "./ManagementLoginPage.module.css";
 
 export const ManagementLoginPage = () => {
-  // const [admin, setAdmin] = useState([]);
   const [Input, setInputs] = useState({});
   const [Error, setError] = useState(false);
   const [Credit, setCredit] = useState(false);
-
-//   const { result } = getDataFetch({
-//     url: ServiceProducts + "/ManagementAconts",
-//   });
-
-// console.log('result',result )
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-  // function getData() {
-  //   fetch(ServiceProducts + "/ManagementAconts")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setAdmin(data);
-  //     });
-  // }
 
   function HandelInputValue(e) {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));

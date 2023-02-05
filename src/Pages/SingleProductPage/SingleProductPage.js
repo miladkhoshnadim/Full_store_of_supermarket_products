@@ -17,7 +17,7 @@ export const SingleProductPage = () => {
   useEffect(() => {
     if (index > -1) {
       const Productt = InformationContext.dataGrops[index].find(
-        (el) => el.id == addresOneProduct[1]
+        (el) => el.id === addresOneProduct[1]
       );
       setProduct(Productt);
     } else {
@@ -25,7 +25,7 @@ export const SingleProductPage = () => {
         .then((res) => res.json())
         .then((result) => setProduct(result));
     }
-  }, []);
+  },[index, InformationContext.dataGrops, addresOneProduct]);
 
   function HandelPlusCounter() {
     if (counter < +Product.inventory) setCounter((prv) => prv + 1);
@@ -49,7 +49,7 @@ export const SingleProductPage = () => {
             <div className={SingleProductStyle.MainSingleProductDiv}>
               <div className={SingleProductStyle.ImgSubjectProductDiv}>
                 <div className={SingleProductStyle.DivImg}>
-                  <img
+                  <img alt=""
                     className={SingleProductStyle.ImgProduct}
                     src={Product.img}
                   />
@@ -65,13 +65,13 @@ export const SingleProductPage = () => {
                   </span>
                   <div className={SingleProductStyle.DivInventoryPrice}>
                     <div className={SingleProductStyle.CounterDiv}>
-                      <span onClick={HandelPlusCounter}>+</span>
+                      <span onClick={HandelPlusCounter} className={SingleProductStyle.PlusSpan}>+</span>
                       <span className={SingleProductStyle.CounterNumber}>
                         {counter}
                       </span>
                       <span className={SingleProductStyle.MinesSpan} onClick={HandelMinesCounter}>_</span>
                     </div>
-                    {counter - Product.inventory == 0 ? (
+                    {counter - Product.inventory === 0 ? (
                       <span>عدم موجودی!</span>
                     ) : (
                       <span>موجودی {Product.inventory-counter} عدد</span>

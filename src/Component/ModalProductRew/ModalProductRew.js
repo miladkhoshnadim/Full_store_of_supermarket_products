@@ -104,7 +104,7 @@ export const ModalProductRew = ({ EditProduct, setShowModal }) => {
       <div className={ModalProductRewstyle.divModalOrderRew}>
         <div className={ModalProductRewstyle.divModalOrderRewSection}>
           <div className={ModalProductRewstyle.divHeadModal}>
-            نمایش سفارش{" "}
+            افزودن / ویرایش کالا{" "}
             <span
               className={ModalProductRewstyle.CloseModal}
               onClick={() => setShowModal(false)}

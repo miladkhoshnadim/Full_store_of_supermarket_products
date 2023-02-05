@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainLayOut } from "../layOut/LayOut";
 import {
+  BascketBuyPage,
   ManagementLoginPage,
   PageHome,
   ProductManagementPage,
@@ -14,12 +15,12 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayOut />}>
-          <Route index element={<PageHome />} />
+          <Route  path="/BascketBuyPage" element={<PageHome />} />
           <Route
             path="/ManagementLoginPage"
             element={<ManagementLoginPage />}
           />
-          {/* <Route index element={<ProductManagementPage />} /> */}
+          <Route index element={<BascketBuyPage />} />
           <Route path="/SingleCategoryPage" element={<SingleCategoryPage />}>
             <Route path=":CategoryId" element={<SingleCategoryPage />} />
           </Route>
