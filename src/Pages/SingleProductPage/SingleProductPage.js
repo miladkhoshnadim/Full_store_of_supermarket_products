@@ -6,6 +6,7 @@ import { ServiceProducts } from "../../services/Servise";
 
 export const SingleProductPage = () => {
   const [Product, setProduct] = useState({});
+  const [counter, setCounter] = useState(0);
   const { ProductId } = useParams();
   const addresOneProduct = ProductId.split("ID");
   const InformationContext = useContext(contexInfo);
@@ -25,6 +26,14 @@ export const SingleProductPage = () => {
         .then((result) => setProduct(result));
     }
   }, []);
+
+  function HandelPlusCounter() {
+    if (counter < +Product.inventory) setCounter((prv) => prv + 1);
+  }
+
+  function HandelMinesCounter(){
+    if (counter > 0) setCounter((prv) => prv - 1);
+  }
 
   return (
     <div className={SingleProductStyle.infinityDivDisplay}>
@@ -54,10 +63,19 @@ export const SingleProductPage = () => {
                     {" "}
                     {Product.price} ریال{" "}
                   </span>
-                  <div className={SingleProductStyle.CounterDiv}>
-                    <span>+</span>
-                    <span className={SingleProductStyle.CounterNumber}>0</span>
-                    <span className={SingleProductStyle.MinesSpan}>_</span>
+                  <div className={SingleProductStyle.DivInventoryPrice}>
+                    <div className={SingleProductStyle.CounterDiv}>
+                      <span onClick={HandelPlusCounter}>+</span>
+                      <span className={SingleProductStyle.CounterNumber}>
+                        {counter}
+                      </span>
+                      <span className={SingleProductStyle.MinesSpan} onClick={HandelMinesCounter}>_</span>
+                    </div>
+                    {counter - Product.inventory == 0 ? (
+                      <span>عدم موجودی!</span>
+                    ) : (
+                      <span>موجودی {Product.inventory-counter} عدد</span>
+                    )}
                   </div>
                 </div>
               </div>
