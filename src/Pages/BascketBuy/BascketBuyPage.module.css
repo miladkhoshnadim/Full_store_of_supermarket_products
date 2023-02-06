@@ -13,7 +13,7 @@
     color: rgb(10, 161, 248);
   }
 
-  .textAprowContinue{
+  .textAprowContinue {
     font-size: 22px;
     font-weight: bold;
     color: rgb(9, 9, 170);
@@ -28,7 +28,7 @@
     box-shadow: 0px 0px 5px 2px rgba(180, 151, 166, 0.71);
   }
 
-  .textAprowContinue:hover{
+  .textAprowContinue:hover {
     cursor: pointer;
     font-size: 25px;
     font-weight: bold;
@@ -102,6 +102,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .ImgTrashOperator:hover {
+    box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71);
+    background-color: rgb(250, 194, 194);
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .ImgTrashOperator {
+    width: 30px;
   }
 
   .ImgProduct {

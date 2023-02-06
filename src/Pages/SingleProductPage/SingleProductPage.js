@@ -55,10 +55,11 @@ export const SingleProductPage = () => {
       (x) => x.id === addresOneProduct[1]
     );
     if (BasketProductindex > -1 && counter == 0) {
-      BasketInventory = BasketInventory.splice(BasketProductindex, 1);
+      BasketInventory.splice(BasketProductindex, 1);
+      console.log("BasketInventoryRemove", BasketInventory);
     } else if (BasketProductindex > -1) {
       BasketInventory[BasketProductindex].count = counter;
-    } else if (counter > 0){
+    } else if (counter > 0) {
       BasketInventory = [
         ...BasketInventory,
         {
@@ -71,7 +72,7 @@ export const SingleProductPage = () => {
       ];
     }
     console.log("BasketInventory", BasketInventory);
-    // localStorage.setItem("BasketBuying", JSON.stringify());
+    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
 
   function HandelPlusCounter() {

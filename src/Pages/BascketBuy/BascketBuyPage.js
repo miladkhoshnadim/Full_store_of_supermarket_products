@@ -1,41 +1,67 @@
 import { useEffect, useState } from "react";
 import BascketBuyPagestyle from "./BascketBuyPage.module.css";
+import ImgTrash from "../../Component/assetsComponents/icons8-trash-can-50.png";
 
 export const BascketBuyPage = () => {
-  const [Products, setProducts] = useState([
-    {
-      id: 43,
-      count: "1",
-      name: "ماست گاله کمچرب",
-      image:
-        "https://api.snapp.market/media/cache/product-variation_image_thumbnail/uploads/images/vendors/users/app/6321c84856871.jpg",
-      price: "358000",
-    },
-    {
-      id: 44,
-      count: "1",
-      name: "!بهترین دوغ غرب آسیا",
-      image:
-        "https://alis.ir/en/storage/2020/04/%D8%A8%D8%AF%D9%88%D9%86-%DA%AF%D8%A7%D8%B2.jpg",
-      price: "308000",
-    },
-  ]);
-
+  const [Products, setProducts] = useState([]);
   const [TotPrices, setTotPrices] = useState(0);
   const [TotCounter, setTotCounter] = useState(0);
+  let BasketInventory = [];
   useEffect(() => {
     SumationFactor();
   }, [Products]);
+
+  useEffect(() => {
+    ChengeBascketInventory();
+  }, []);
 
   function SumationFactor() {
     setTotPrices(0);
     setTotCounter(0);
     Products.forEach((item) => {
       // Sumation = +item.price + Sumation;
-      setTotPrices((prv) => +item.price + prv);
+      setTotPrices((prv) => +item.price * item.count + prv);
       setTotCounter((prv) => +item.count + prv);
     });
     // setTotPrices(Sumation);
+  }
+
+  function HandelRemoveProduct(index) {
+    BasketInventory = [...Products];
+    console.log("!@#bef", BasketInventory);
+    BasketInventory.splice(index, 1);
+    console.log("!@#next", BasketInventory);
+    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    setProducts(BasketInventory);
+  }
+
+  function ChengeBascketInventory() {
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
+    setProducts(BasketInventory);
+    // const BasketProductindex = BasketInventory.findIndex(
+    //   (x) => x.id === addresOneProduct[1]
+    // );
+    // if (BasketProductindex > -1 && counter == 0) {
+    //   BasketInventory.splice(BasketProductindex, 1);
+    //   // console.log("BasketInventoryRemove", BasketInventory);
+    // } else if (BasketProductindex > -1) {
+    //   BasketInventory[BasketProductindex].count = counter;
+    // } else if (counter > 0) {
+    //   BasketInventory = [
+    //     ...BasketInventory,
+    //     {
+    //       id: `${Product.id}`,
+    //       name: `${Product.Lable}`,
+    //       count: `${counter}`,
+    //       image: `${Product.img}`,
+    //       price: `${Product.price}`,
+    //     },
+    //   ];
+    // }
+    // console.log("BasketInventory", BasketInventory);
+    // localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
 
   return (
@@ -48,7 +74,9 @@ export const BascketBuyPage = () => {
       </div>
 
       {Products.length < 1 ? (
-        <div className={BascketBuyPagestyle.divLoding}>در حال بارگذاری...</div>
+        <div className={BascketBuyPagestyle.divLoding}>
+          هنوز سبد خرید خالیست ...
+        </div>
       ) : (
         <>
           <div className={BascketBuyPagestyle.TableSection}>
@@ -93,7 +121,14 @@ export const BascketBuyPage = () => {
                 <span className={BascketBuyPagestyle.SpanCountProduct}>
                   {item.count}
                 </span>
-                <span className={BascketBuyPagestyle.SpanOperator}>عملیات</span>
+                <span className={BascketBuyPagestyle.SpanOperator}>
+                  <img
+                    onClick={() => HandelRemoveProduct(i)}
+                    className={BascketBuyPagestyle.ImgTrashOperator}
+                    alt=""
+                    src={ImgTrash}
+                  />
+                </span>
               </div>
             ))}
 
