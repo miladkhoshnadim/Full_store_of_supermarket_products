@@ -37,7 +37,7 @@
 
   .TableSection {
     margin-top: 15px;
-    padding: 0 50px;
+    padding: 0 50px 70px;
   }
 
   .DivHeadTable {
@@ -149,18 +149,34 @@
     padding: 10px;
   }
 
+  .DivConfirmDelete {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 10px 80px 20px 0px;
+    font-weight: bold;
+    font-family: "Vazir";
+    font-size: 15px;
+    color: rgb(255, 0, 13);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(248, 221, 221);
+  }
+
   /*********/
 
-  .SpanRewOrder {
+  /* .SpanRewOrder {
     cursor: pointer;
     width: 20%;
     padding: 10px;
 
     align-items: center;
     text-align: center;
-  }
+  } */
 
-  .MoreInfoImg:hover {
+  /* .MoreInfoImg:hover {
     width: 25px;
     background: linear-gradient(
       86deg,
@@ -170,9 +186,9 @@
     );
     border-radius: 10px;
     padding: 2px 5px;
-    /* background-color: aqua; */
-    /* box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71); */
-  }
+    background-color: aqua;
+    box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71);
+  } */
 
   .DivRowTables {
     display: flex;
@@ -186,7 +202,7 @@
     font-family: "Vazir";
   }
 
-  .PaginationDiv {
+  /* .PaginationDiv {
     display: flex;
     justify-content: space-between;
     width: 150px;
@@ -200,9 +216,9 @@
       rgba(119, 248, 229, 1) 50%,
       rgb(244, 247, 163) 100%
     );
-  }
+  } */
 
-  .PaginationDivError {
+  /* .PaginationDivError {
     width: 300px;
     text-align: center;
     margin: 20px 33% 0;
@@ -216,14 +232,14 @@
       rgba(119, 248, 229, 1) 50%,
       rgb(244, 247, 163) 100%
     );
-  }
+  }*/
 
-  .PaginationBotton:hover {
+  /* .PaginationBotton:hover { 
     cursor: pointer;
     background-color: rgb(246, 250, 6);
     font-size: 15px;
     color: red;
-  }
+  } */
 
   .divLoding {
     margin: 100px 300px 0 0;

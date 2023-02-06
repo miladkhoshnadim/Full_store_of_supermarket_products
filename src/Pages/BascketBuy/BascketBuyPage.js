@@ -6,6 +6,8 @@ export const BascketBuyPage = () => {
   const [Products, setProducts] = useState([]);
   const [TotPrices, setTotPrices] = useState(0);
   const [TotCounter, setTotCounter] = useState(0);
+  const [ItemRemove, setItemRemove] = useState(-1);
+  const [ModifyDeletedShow, setModifyDeletedShow]=useState(false)
   let BasketInventory = [];
   useEffect(() => {
     SumationFactor();
@@ -26,13 +28,14 @@ export const BascketBuyPage = () => {
     // setTotPrices(Sumation);
   }
 
-  function HandelRemoveProduct(index) {
+  function HandelRemoveProduct() {
     BasketInventory = [...Products];
     console.log("!@#bef", BasketInventory);
-    BasketInventory.splice(index, 1);
+    BasketInventory.splice(ItemRemove, 1);
     console.log("!@#next", BasketInventory);
     localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
     setProducts(BasketInventory);
+    setModifyDeletedShow(false)
   }
 
   function ChengeBascketInventory() {
@@ -72,6 +75,20 @@ export const BascketBuyPage = () => {
           تایید فاکتور و ادامه خرید
         </span>
       </div>
+
+      {ModifyDeletedShow && (
+              <div className={BascketBuyPagestyle.DivConfirmDelete}>
+                آیا می خواهید ردیف {ItemRemove+1} حذف شود؟
+                <span onClick={HandelRemoveProduct}>
+                  {" "}
+                  بله{" "}
+                </span>
+                <span onClick={() => setModifyDeletedShow(false)}>
+                  {" "}
+                  خیر{" "}
+                </span>
+              </div>
+            )}
 
       {Products.length < 1 ? (
         <div className={BascketBuyPagestyle.divLoding}>
@@ -123,7 +140,7 @@ export const BascketBuyPage = () => {
                 </span>
                 <span className={BascketBuyPagestyle.SpanOperator}>
                   <img
-                    onClick={() => HandelRemoveProduct(i)}
+                    onClick={() => {setItemRemove(i); setModifyDeletedShow(true);}}
                     className={BascketBuyPagestyle.ImgTrashOperator}
                     alt=""
                     src={ImgTrash}

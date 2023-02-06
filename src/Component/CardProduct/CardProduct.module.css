@@ -56,25 +56,60 @@
   }
 
   .PriceWith {
-    width: 140px;
+    width: 90px;
     display: flex;
     /* justify-content: center; */
     align-items: center;
   }
 
-  .CounterPluse {
-    background-color: #665bf7;
+  .DivCounter {
+    /* background-color: #665bf7;
+    padding: 3px 6px; */
+    font-weight: 900;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+    color: rgb(93, 91, 231);
+    
+    border-radius: 5px;
+  }
+
+  .SpanCounterPluse {
+    cursor: pointer;
+    background-color: #837bf5;
     padding: 3px 6px;
     font-weight: 900;
-    /* font-size: 1.5rem; */
     color: white;
     border-radius: 5px;
+  }
+
+  .SpanCounterPluses {
+    cursor: pointer;
+    background-color: #7bf595;
+    padding: 2px 4px;
+    font-weight: 800;
+    /* color: rgb(93, 91, 231); */
+    border-radius: 5px;
+  }
+
+  .SpanCounterMines {
+    cursor: pointer;
+    background-color: #f57bc6;
+    padding: 0px 4px 6px;
+    font-weight: 800;
+    /* color: rgb(93, 91, 231); */
+    border-radius: 5px;
+
   }
 
   .linkStyle {
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  
 }
 
 /*************************************************/

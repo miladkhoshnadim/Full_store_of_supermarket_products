@@ -42,7 +42,7 @@ export const SingleProductPage = () => {
       (x) => x.id === addresOneProduct[1]
     );
     if (BasketProductindex > -1) {
-      setCounter(BasketInventory[BasketProductindex].count);
+      setCounter(+BasketInventory[BasketProductindex].count);
     }
   }
 
