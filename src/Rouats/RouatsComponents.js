@@ -4,6 +4,7 @@ import {
   BascketBuyPage,
   ManagementLoginPage,
   PageHome,
+  PaymentMassagePage,
   ProductManagementPage,
   SingleCategoryPage,
   SingleProductPage,
@@ -15,10 +16,14 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayOut />}>
-          <Route index element={<PageHome />} />
+          <Route path="/PaymentMassagePage" element={<PageHome />} />
           <Route
             path="/ManagementLoginPage"
             element={<ManagementLoginPage />}
+          />
+           <Route
+            index
+            element={<PaymentMassagePage />}
           />
           <Route path="/BascketBuyPage"  element={<BascketBuyPage />} />
           <Route path="/SingleCategoryPage" element={<SingleCategoryPage />}>

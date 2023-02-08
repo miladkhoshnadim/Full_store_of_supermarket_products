@@ -56,7 +56,7 @@ export const SingleProductPage = () => {
     );
     if (BasketProductindex > -1 && counter == 0) {
       BasketInventory.splice(BasketProductindex, 1);
-      console.log("BasketInventoryRemove", BasketInventory);
+      // console.log("BasketInventoryRemove", BasketInventory);
     } else if (BasketProductindex > -1) {
       BasketInventory[BasketProductindex].count = counter;
     } else if (counter > 0) {
@@ -71,7 +71,7 @@ export const SingleProductPage = () => {
         },
       ];
     }
-    console.log("BasketInventory", BasketInventory);
+    // console.log("BasketInventory", BasketInventory);
     localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
 

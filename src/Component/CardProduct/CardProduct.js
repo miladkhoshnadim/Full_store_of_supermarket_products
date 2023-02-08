@@ -14,8 +14,6 @@ export const CardProduct = ({ item, group }) => {
     ChengeBascketInventory();
   }, [counter]);
 
-
-
   function HandelBasketInventory() {
     BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
     const BasketProductindex = BasketInventory.findIndex(
@@ -42,15 +40,9 @@ export const CardProduct = ({ item, group }) => {
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
     );
-    // console.log(
-    //   "BasketProductindex",
-    //   BasketInventory,
-    //   BasketProductindex,
-    //   item.id
-    // );
+
     if (BasketProductindex > -1 && counter == 0) {
       BasketInventory.splice(BasketProductindex, 1);
-      // console.log("BasketInventoryRemove", BasketInventory);
     } else if (BasketProductindex > -1) {
       BasketInventory[BasketProductindex].count = counter;
     } else if (counter > 0) {
@@ -65,7 +57,7 @@ export const CardProduct = ({ item, group }) => {
         },
       ];
     }
-    // console.log("BasketInventory", BasketInventory);
+
     localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
   return (
