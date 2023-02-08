@@ -1,10 +1,19 @@
 import PaymentMassagePageStyle from "./PaymentMassagePage.module.css";
 import SuccesFullyIcon from "../../Component/assetsComponents/sussesfull.png";
 import notSuccesIcon from "../../Component/assetsComponents/notSuccessFull.jpg";
+import PaymentImage from "../../Component/assetsComponents/get-parsian-payment-gateway-for-website.jpg";
 import { useState } from "react";
 
 export const PaymentMassagePage = () => {
-  const [SuccesOrNot, setSuccesOrNot] = useState([false, false]);
+  const [SuccesOrNot, setSuccesOrNot] = useState([false, false, true]);
+
+  function HandellSuccessPayment() {
+    setSuccesOrNot([true, false, false]);
+  }
+
+  function HandellNotSuccessPayment() {
+    setSuccesOrNot([false, true, false]);
+  }
 
   return (
     <div className={PaymentMassagePageStyle.divMainLoginPage}>
@@ -12,6 +21,31 @@ export const PaymentMassagePage = () => {
         <span className={PaymentMassagePageStyle.headPageLogin}>
           صفحه پرداخت
         </span>
+        {SuccesOrNot[2] && (
+          <>
+            <div className={PaymentMassagePageStyle.mainPagePayment}>
+              <img
+                alt=""
+                src={PaymentImage}
+                className={PaymentMassagePageStyle.ImagePayment}
+              />
+              <div className={PaymentMassagePageStyle.divBottonPayment}>
+                <span
+                  className={PaymentMassagePageStyle.BottonPayment}
+                  onClick={HandellSuccessPayment}
+                >
+                  پرداخت موفق
+                </span>
+                <span
+                  className={PaymentMassagePageStyle.BottonnotPayment}
+                  onClick={HandellNotSuccessPayment}
+                >
+                  انصراف
+                </span>
+              </div>
+            </div>
+          </>
+        )}
         {SuccesOrNot[0] && (
           <div className={PaymentMassagePageStyle.divMassageIconSucces}>
             <img

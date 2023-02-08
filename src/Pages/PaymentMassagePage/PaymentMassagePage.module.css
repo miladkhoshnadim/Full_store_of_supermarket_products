@@ -8,15 +8,61 @@
   }
 
   .mainPageLogin {
-    width: 606px;
+    width: 1000px;
     /* border-radius: 15px; */
     /* overflow-y: scroll; */
-    padding: 0px 0 65px;
+    /* padding: 0px 0 65px; */
   }
 
-  /* .mainPageLogin::-webkit-scrollbar {
-      width: 0;
-    } */
+  .ImagePayment {
+    width: 990px;
+  }
+
+  .divBottonPayment {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-family: "Vazir";
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  .BottonPayment {
+  padding: 10px 20px;
+  background-color: rgb(195, 243, 219);
+  border-radius: 15px;
+  color: #075a0e;
+}
+
+.BottonPayment:hover{
+    background-color: rgb(137, 241, 134);
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.BottonnotPayment {
+    padding: 10px 20px;
+    background-color: rgb(241, 208, 181);
+    border-radius: 15px;
+    color: #5a0712;
+  }
+
+  .BottonnotPayment:hover{
+    background-color: red;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .mainPagePayment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 990px;
+    padding: 0px 0 65px;
+    margin-top: 20px;
+  }
 
   .headPageLogin {
     font-family: "Vazir";
@@ -27,9 +73,10 @@
   }
 
   .divMassageIconSucces {
+    width: 600px;
     background-color: rgb(236, 248, 236);
     border-radius: 15px;
-    margin-top: 50px;
+    margin: 50px 200px 0 0;
     height: 300px;
     display: flex;
     justify-content: space-around;
@@ -55,9 +102,10 @@
   }
 
   .divMassageIconNSucces {
+    width: 600px;
     background-color: rgb(252, 223, 211);
     border-radius: 15px;
-    margin-top: 50px;
+    margin: 50px 200px 0 0;
     height: 300px;
     display: flex;
     justify-content: space-around;
