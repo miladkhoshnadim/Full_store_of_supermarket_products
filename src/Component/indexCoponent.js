@@ -10,3 +10,4 @@ export { parseLinkHeader } from "./Functions/FunctionPagination";
 export { ModalOrderRew } from "./ModalOrderRew/ModalOrderRew";
 export { ModalProductRew } from "./ModalProductRew/ModalProductRew";
 export { GetDataFetch } from "./Functions/FanctionGetData";
+export { InfoCustomerModal } from "./InfoCostomerModal/InfoCostomerModal";

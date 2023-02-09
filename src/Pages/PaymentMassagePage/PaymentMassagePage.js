@@ -46,6 +46,7 @@ export const PaymentMassagePage = () => {
             </div>
           </>
         )}
+        
         {SuccesOrNot[0] && (
           <div className={PaymentMassagePageStyle.divMassageIconSucces}>
             <img
