@@ -15,7 +15,11 @@ export const ProductManagementPage = () => {
   // const [DataProduct, setDataProduct] = useState([]);
   // const [DataOrders, setDataOrders] = useState([]);
   useEffect(() => {
-    // localStorage.removeItem("userManagement");
+
+    setTimeout(() => {
+      localStorage.removeItem("userManagement");
+    }, 60000);
+    
     // getData(5);
   }, []);
 

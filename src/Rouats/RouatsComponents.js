@@ -16,16 +16,13 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayOut />}>
-          <Route path="/PaymentMassagePage" element={<PageHome />} />
+          <Route index element={<PageHome />} />
           <Route
             path="/ManagementLoginPage"
             element={<ManagementLoginPage />}
           />
-           <Route
-            index
-            element={<PaymentMassagePage />}
-          />
-          <Route path="/BascketBuyPage"  element={<BascketBuyPage />} />
+          <Route path="/PaymentMassagePage" element={<PaymentMassagePage />} />
+          <Route path="/BascketBuyPage" element={<BascketBuyPage />} />
           <Route path="/SingleCategoryPage" element={<SingleCategoryPage />}>
             <Route path=":CategoryId" element={<SingleCategoryPage />} />
           </Route>

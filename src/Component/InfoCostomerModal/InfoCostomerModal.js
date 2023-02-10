@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { ServiceProducts } from "../../services/Servise";
 import InfoCustomerModalstyle from "./InfoCostomerModal.module.css";
 
-export const InfoCustomerModal = ({ setShowModal, TotPrices }) => {
+export const InfoCustomerModal = ({
+  setShowModal,
+  inputsValue,
+  setInputsValue,
+}) => {
   const [ShowErrors, setShowErrors] = useState([false, false, false, true]);
-  const [inputsValue, setInputsValue] = useState({});
+
+  const navigat = useNavigate();
 
   function HandelChengeInputs(e) {
     setInputsValue((prv) => ({ ...prv, [e.target.name]: e.target.value }));
@@ -30,31 +36,12 @@ export const InfoCustomerModal = ({ setShowModal, TotPrices }) => {
       inputsValue.phone.length > 2
     ) {
       setShowErrors([false, true, false, false]);
-      fetch(ServiceProducts + `/users`, {
-        method: "POST",
-        body: JSON.stringify({
-          username: `${inputsValue.username}`,
-          expectAt: `${inputsValue.expectAt}`,
-          address: `${inputsValue.address}`,
-          lastname: `${inputsValue.lastname}`,
-          phone: `${inputsValue.phone}`,
-          Explain: `${inputsValue.Explain}`,
-          prices: `${TotPrices}`,
-          delivered: `${false}`,
-          createdAt: `${1401}`,
-          products: JSON.parse(localStorage.getItem("BasketBuying")) || [],
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      }).then(() => {
-        localStorage.setItem("BasketBuying", JSON.stringify([]));
-        setShowErrors([false, false, true, false]);
-        setTimeout(() => {
-          setShowErrors([false, false, false, false]);
-          setShowModal(false);
-        }, 4000);
-      });
+      setTimeout(() => {
+        setShowErrors([false, false, false, false]);
+        setShowModal(false);
+        localStorage.setItem("CostomerInfo", JSON.stringify(inputsValue));
+        navigat("/PaymentMassagePage");
+      }, 4000);
     } else {
       setShowErrors([true, false, false, true]);
       setTimeout(() => {

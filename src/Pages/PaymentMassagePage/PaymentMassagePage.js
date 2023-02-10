@@ -3,16 +3,28 @@ import SuccesFullyIcon from "../../Component/assetsComponents/sussesfull.png";
 import notSuccesIcon from "../../Component/assetsComponents/notSuccessFull.jpg";
 import PaymentImage from "../../Component/assetsComponents/get-parsian-payment-gateway-for-website.jpg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
 export const PaymentMassagePage = () => {
   const [SuccesOrNot, setSuccesOrNot] = useState([false, false, true]);
+  const navigate = useNavigate();
 
   function HandellSuccessPayment() {
     setSuccesOrNot([true, false, false]);
+    localStorage.setItem("PaymentCondition", JSON.stringify("true"));
+    setTimeout(() => {
+      navigate("/BascketBuyPage");
+    }, 5000);
   }
 
   function HandellNotSuccessPayment() {
     setSuccesOrNot([false, true, false]);
+
+    localStorage.setItem("PaymentCondition", JSON.stringify("false"));
+    setTimeout(() => {
+      navigate("/BascketBuyPage");
+    }, 5000);
   }
 
   return (
@@ -46,7 +58,7 @@ export const PaymentMassagePage = () => {
             </div>
           </>
         )}
-        
+
         {SuccesOrNot[0] && (
           <div className={PaymentMassagePageStyle.divMassageIconSucces}>
             <img
