@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import { ServiceProducts } from "../../services/Servise";
+import { useNavigate } from "react-router-dom";
+// import { ServiceProducts } from "../../services/Servise";
 import InfoCustomerModalstyle from "./InfoCostomerModal.module.css";
 
 export const InfoCustomerModal = ({

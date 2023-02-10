@@ -17,7 +17,7 @@ export const CardProduct = ({ item, group }) => {
   }, [counter]);
 
   function HandelBasketInventory() {
-    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
     );
@@ -35,9 +35,9 @@ export const CardProduct = ({ item, group }) => {
   }
 
   function ChengeBascketInventory() {
-    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
-    //   : [];
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
 
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
@@ -60,7 +60,7 @@ export const CardProduct = ({ item, group }) => {
       ];
     }
     Info.setBacketInventory(BasketInventory);
-    // localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
   return (
     <div className={CardProductStyle.oneProductDiv}>

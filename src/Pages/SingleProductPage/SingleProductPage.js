@@ -34,9 +34,9 @@ export const SingleProductPage = () => {
   }, [counter]);
 
   function HandelBasketInventory() {
-    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
-    //   : [];
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
     // BasketInventory = [...InformationContext.BacketInventory];
 
     const BasketProductindex = BasketInventory.findIndex(
@@ -48,9 +48,9 @@ export const SingleProductPage = () => {
   }
 
   function ChengeBascketInventory() {
-    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
-    //   : [];
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
     // BasketInventory = [...InformationContext.BacketInventory];
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id === addresOneProduct[1]
@@ -74,7 +74,7 @@ export const SingleProductPage = () => {
     }
     // console.log("BasketInventory", BasketInventory);
     InformationContext.setBacketInventory(BasketInventory);
-    // localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
 
   function HandelPlusCounter() {

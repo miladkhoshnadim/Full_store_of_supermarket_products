@@ -16,6 +16,7 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
       method: "PATCH",
       body: JSON.stringify({
         delivered: "true",
+        deliveredAt: `${new Date().toLocaleDateString()}`,
       }),
     }).then(() => {
       setDelivering(false);
@@ -99,7 +100,7 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
           {ItemModal.delivered === "true" ? (
             <div className={ModalOrderRewstyle.divDeliveredDate}>
               <span>زمان تحویل شده:</span>
-              {ItemModal.expectAt}
+              {ItemModal.deliveredAt}
             </div>
           ) : (
             <div

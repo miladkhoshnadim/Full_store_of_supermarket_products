@@ -8,8 +8,10 @@ function App() {
   const [inputSerch, setInputSerch] = useState("");
   const [dataGrops, setdataGrops] = useState([]);
   const [GroupName, setGroupName] = useState([]);
-  const [BacketInventory, setBacketInventory] = useState([]);
-  // JSON.parse(localStorage.getItem("BasketBuying")) ||
+  const [BacketInventory, setBacketInventory] = useState(
+    JSON.parse(localStorage.getItem("BasketBuying")) || []
+  );
+  //
   let newDataGrop = [];
   let newGroupName = [];
 

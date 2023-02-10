@@ -24,9 +24,9 @@ export const BascketBuyPage = () => {
     SumationFactor();
   }, [Products]);
 
-  // useEffect(() => {
-  //   // ChengeBascketInventory();
-  // }, []);
+  useEffect(() => {
+    ChengeBascketInventory();
+  }, []);
 
   useEffect(() => {
     SuccessPaymenting();
@@ -51,17 +51,17 @@ export const BascketBuyPage = () => {
     // BacketInventory
     Info.setBacketInventory(BasketInventory);
     setProducts(BasketInventory);
-    // localStorage.setItem(" ", JSON.stringify(BasketInventory));
+    localStorage.setItem("BasketBuying ", JSON.stringify(BasketInventory));
     // setProducts(BasketInventory);
     setModifyDeletedShow(false);
   }
 
-  // function ChengeBascketInventory() {
-  //   BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-  //     ? JSON.parse(localStorage.getItem("BasketBuying"))
-  //     : [];
-  //   setProducts(BasketInventory);
-  // }
+  function ChengeBascketInventory() {
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+      ? JSON.parse(localStorage.getItem("BasketBuying"))
+      : [];
+    setProducts(BasketInventory);
+  }
 
   function SuccessPaymenting() {
     const ConditionPay = JSON.parse(localStorage.getItem("PaymentCondition"))
@@ -72,8 +72,8 @@ export const BascketBuyPage = () => {
       // const CostomerInfo = JSON.parse(localStorage.getItem("CostomerInfo"))
       setShowError([false, true, false, false]);
       SumationFactor();
-      // Products.reduser((a, b) => +a +( (+b.price) *(+ b.count)))
-      console.log("TotPrices", TotPrices);
+      const NTotPrice = JSON.parse(localStorage.getItem("BasketBuying")).reduce((a, b) => +a +( (+b.price) *(+ b.count)),0)
+      console.log("TotPrices", NTotPrice);
       fetch(ServiceProducts + `/users`, {
         method: "POST",
         body: JSON.stringify({
@@ -83,11 +83,11 @@ export const BascketBuyPage = () => {
           lastname: `${inputsValue.lastname}`,
           phone: `${inputsValue.phone}`,
           Explain: `${inputsValue.Explain}`,
-          prices: `${TotPrices}`,
+          prices: `${NTotPrice}`,
           delivered: `${false}`,
-          createdAt: `${1401}`,
-          products: Products,
-          // products: JSON.parse(localStorage.getItem("BasketBuying")) || [],
+          createdAt: `${new Date().toLocaleDateString()}`,
+          // products: Info.BacketInventory,
+          products: JSON.parse(localStorage.getItem("BasketBuying")) || [],
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -99,7 +99,7 @@ export const BascketBuyPage = () => {
         }, 5000);
         localStorage.removeItem("PaymentCondition");
         localStorage.removeItem("CostomerInfo");
-        // localStorage.setItem("BasketBuying", JSON.stringify([]));
+        localStorage.setItem("BasketBuying", JSON.stringify([]));
         Info.setBacketInventory([]);
         setProducts([]);
       });
