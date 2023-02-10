@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BascketBuyPagestyle from "./BascketBuyPage.module.css";
 import ImgTrash from "../../Component/assetsComponents/icons8-trash-can-50.png";
 import { InfoCustomerModal } from "../../Component/indexCoponent";
 import { ServiceProducts } from "../../services/Servise";
+import { contexInfo } from "../../Component/context/Contex";
 
 export const BascketBuyPage = () => {
-  const [Products, setProducts] = useState([]);
+  const Info = useContext(contexInfo);
+  const [Products, setProducts] = useState(Info.BacketInventory);
   const [TotPrices, setTotPrices] = useState(0);
   const [TotCounter, setTotCounter] = useState(0);
   const [ItemRemove, setItemRemove] = useState(-1);
@@ -22,9 +24,9 @@ export const BascketBuyPage = () => {
     SumationFactor();
   }, [Products]);
 
-  useEffect(() => {
-    ChengeBascketInventory();
-  }, []);
+  // useEffect(() => {
+  //   // ChengeBascketInventory();
+  // }, []);
 
   useEffect(() => {
     SuccessPaymenting();
@@ -43,20 +45,23 @@ export const BascketBuyPage = () => {
 
   function HandelRemoveProduct() {
     BasketInventory = [...Products];
-    console.log("!@#bef", BasketInventory);
+    // console.log("!@#bef", BasketInventory);
     BasketInventory.splice(ItemRemove, 1);
-    console.log("!@#next", BasketInventory);
-    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    // console.log("!@#next", BasketInventory);
+    // BacketInventory
+    Info.setBacketInventory(BasketInventory);
     setProducts(BasketInventory);
+    // localStorage.setItem(" ", JSON.stringify(BasketInventory));
+    // setProducts(BasketInventory);
     setModifyDeletedShow(false);
   }
 
-  function ChengeBascketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-      ? JSON.parse(localStorage.getItem("BasketBuying"))
-      : [];
-    setProducts(BasketInventory);
-  }
+  // function ChengeBascketInventory() {
+  //   BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+  //     ? JSON.parse(localStorage.getItem("BasketBuying"))
+  //     : [];
+  //   setProducts(BasketInventory);
+  // }
 
   function SuccessPaymenting() {
     const ConditionPay = JSON.parse(localStorage.getItem("PaymentCondition"))
@@ -66,6 +71,9 @@ export const BascketBuyPage = () => {
     if (ConditionPay == "true") {
       // const CostomerInfo = JSON.parse(localStorage.getItem("CostomerInfo"))
       setShowError([false, true, false, false]);
+      SumationFactor();
+      // Products.reduser((a, b) => +a +( (+b.price) *(+ b.count)))
+      console.log("TotPrices", TotPrices);
       fetch(ServiceProducts + `/users`, {
         method: "POST",
         body: JSON.stringify({
@@ -78,7 +86,8 @@ export const BascketBuyPage = () => {
           prices: `${TotPrices}`,
           delivered: `${false}`,
           createdAt: `${1401}`,
-          products: JSON.parse(localStorage.getItem("BasketBuying")) || [],
+          products: Products,
+          // products: JSON.parse(localStorage.getItem("BasketBuying")) || [],
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -90,8 +99,8 @@ export const BascketBuyPage = () => {
         }, 5000);
         localStorage.removeItem("PaymentCondition");
         localStorage.removeItem("CostomerInfo");
-        localStorage.setItem("BasketBuying", JSON.stringify([]));
-        // setInputsValue({});
+        // localStorage.setItem("BasketBuying", JSON.stringify([]));
+        Info.setBacketInventory([]);
         setProducts([]);
       });
     } else if (ConditionPay == "false") {

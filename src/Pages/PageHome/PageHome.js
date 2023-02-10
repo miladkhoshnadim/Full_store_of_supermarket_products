@@ -4,9 +4,8 @@ import { useContext } from "react";
 import { FooterPageHome, SingleCategory } from "../../Component/indexCoponent";
 import { contexInfo } from "../../Component/context/Contex";
 
-
 export const PageHome = () => {
-  const Info = useContext(contexInfo)
+  const Info = useContext(contexInfo);
 
   return (
     <>

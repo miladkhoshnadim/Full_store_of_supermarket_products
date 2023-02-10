@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { AppRoutes } from "./Rouats/RouatsComponents";
 import { contexInfo } from "./Component/context/Contex";
 
-
 function App() {
   const [inputSerch, setInputSerch] = useState("");
   const [dataGrops, setdataGrops] = useState([]);
   const [GroupName, setGroupName] = useState([]);
+  const [BacketInventory, setBacketInventory] = useState([]);
+  // JSON.parse(localStorage.getItem("BasketBuying")) ||
   let newDataGrop = [];
   let newGroupName = [];
 
@@ -43,7 +44,14 @@ function App() {
   return (
     <>
       <contexInfo.Provider
-        value={{ inputSerch, setInputSerch, dataGrops ,GroupName }}
+        value={{
+          inputSerch,
+          setInputSerch,
+          dataGrops,
+          GroupName,
+          BacketInventory,
+          setBacketInventory,
+        }}
       >
         <AppRoutes />
       </contexInfo.Provider>

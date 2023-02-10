@@ -24,7 +24,7 @@
     border-radius: 15px;
   }
 
-  .divModalFooterCategorys{
+  .divModalFooterCategorys {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -32,7 +32,7 @@
     bottom: 61px;
   }
 
-  .ModalFooterCategorys{
+  .ModalFooterCategorys {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@
     padding: 20px 50px;
   }
 
-  .MFSingleCategorys{
+  .MFSingleCategorys {
     cursor: pointer;
     background-color: aquamarine;
     border-radius: 10px;
@@ -82,6 +82,18 @@
 
   .IconsImg {
     width: 30px;
+  }
+  .NotificationBasket {
+    position: relative;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgb(248, 69, 69);
+    padding: 1px 5px;
+    /* font-size: 18px; */
+    font-weight: bold;
+    color: white;
+    top: -30px;
+    left: 50px;
   }
 }
 

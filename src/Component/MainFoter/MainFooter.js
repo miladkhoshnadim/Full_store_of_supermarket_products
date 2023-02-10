@@ -3,12 +3,22 @@ import basketImg from "./assetsfooter/basket.png";
 import SqureImg from "./assetsfooter/squre.png";
 import HomeImg from "./assetsfooter/HomeIcon.png";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { contexInfo } from "../context/Contex";
 
 export const MainFooter = () => {
   const [ShoCategorys, setShoCategorys] = useState(false);
+ 
   const Info = useContext(contexInfo);
+
+  // useEffect(() => {
+  //   handelBascketNumber();
+  // }, []);
+
+  // function handelBascketNumber() {
+  //   // JSON.parse(localStorage.getItem("BasketBuying")) || []
+  // }
+
   return (
     <>
       {ShoCategorys && (
@@ -39,6 +49,11 @@ export const MainFooter = () => {
             </Link>
             <Link className="linkStyle" to={`/BascketBuyPage`}>
               <span className={StyleFooter.textIcon}>سبد خرید</span>
+              {Info.BacketInventory.length > 0 && (
+                <span className={StyleFooter.NotificationBasket}>
+                  {Info.BacketInventory.length}
+                </span>
+              )}
             </Link>
           </div>
           <div

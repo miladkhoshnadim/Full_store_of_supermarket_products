@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { contexInfo } from "../context/Contex";
 import CardProductStyle from "./CardProduct.module.css";
 
 export const CardProduct = ({ item, group }) => {
   const [counter, SetCounter] = useState(0);
-  let BasketInventory = 0;
+  const Info = useContext(contexInfo);
+  let BasketInventory = [...Info.BacketInventory];
 
   useEffect(() => {
     HandelBasketInventory();
@@ -15,7 +17,7 @@ export const CardProduct = ({ item, group }) => {
   }, [counter]);
 
   function HandelBasketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
+    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
     );
@@ -33,9 +35,9 @@ export const CardProduct = ({ item, group }) => {
   }
 
   function ChengeBascketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-      ? JSON.parse(localStorage.getItem("BasketBuying"))
-      : [];
+    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
+    //   : [];
 
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
@@ -57,8 +59,8 @@ export const CardProduct = ({ item, group }) => {
         },
       ];
     }
-
-    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    Info.setBacketInventory(BasketInventory);
+    // localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
   return (
     <div className={CardProductStyle.oneProductDiv}>

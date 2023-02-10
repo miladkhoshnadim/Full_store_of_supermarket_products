@@ -13,7 +13,7 @@ export const SingleProductPage = () => {
   const index = InformationContext.GroupName.findIndex(
     (x) => x === addresOneProduct[0]
   );
-  let BasketInventory = [];
+  let BasketInventory = [...InformationContext.BacketInventory];
 
   useEffect(() => {
     if (index > -1) {
@@ -34,9 +34,10 @@ export const SingleProductPage = () => {
   }, [counter]);
 
   function HandelBasketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-      ? JSON.parse(localStorage.getItem("BasketBuying"))
-      : [];
+    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
+    //   : [];
+    // BasketInventory = [...InformationContext.BacketInventory];
 
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id === addresOneProduct[1]
@@ -47,10 +48,10 @@ export const SingleProductPage = () => {
   }
 
   function ChengeBascketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
-      ? JSON.parse(localStorage.getItem("BasketBuying"))
-      : [];
-
+    // BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"))
+    //   ? JSON.parse(localStorage.getItem("BasketBuying"))
+    //   : [];
+    // BasketInventory = [...InformationContext.BacketInventory];
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id === addresOneProduct[1]
     );
@@ -72,7 +73,8 @@ export const SingleProductPage = () => {
       ];
     }
     // console.log("BasketInventory", BasketInventory);
-    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+    InformationContext.setBacketInventory(BasketInventory);
+    // localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
   }
 
   function HandelPlusCounter() {
