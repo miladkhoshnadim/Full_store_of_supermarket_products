@@ -25,7 +25,6 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
         setDelivered(false);
         setModalShow(false);
       }, 5000);
-      
     });
   }
 
@@ -96,6 +95,17 @@ export const ModalOrderRew = ({ ItemModal, setModalShow }) => {
                 </span>
               </div>
             ))}
+            <div className={ModalOrderRewstyle.DivFooterTable}>
+              <span className={ModalOrderRewstyle.SpanTotText}>
+                مجموع فاکتور:
+              </span>
+              <span className={ModalOrderRewstyle.SpanTotPrice}>
+                {ItemModal.prices} ریال
+              </span>
+              {/* <span className={ModalOrderRewstyle.SpanTotCounter}>
+                  {TotCounter} قلم کالا
+                </span> */}
+            </div>
           </div>
           {ItemModal.delivered === "true" ? (
             <div className={ModalOrderRewstyle.divDeliveredDate}>

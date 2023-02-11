@@ -7,9 +7,9 @@
     padding-top: 15px;
 
     justify-content: center;
-
+  
     position: fixed;
-
+    
     z-index: 12;
     top: 50px;
     right: 0;
@@ -26,21 +26,16 @@
   }
 
   .divModalOrderRewSection {
-    /* z-index: 12; */
     width: 700px;
     border-radius: 15px;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    /* position: fixed; */
     background-color: rgb(246, 250, 250);
-    /* top: 50px;
-    right: 180px; */
     font-family: "Vazir";
-    padding: 20px;
+    padding:50px 20px;
   }
 
   .divHeadModal {
@@ -63,68 +58,47 @@
     background-color: rgb(236, 165, 165);
   }
 
-  .divInfoModal {
-    margin-top: 15px;
-    font-size: 20px;
+  .divInputs {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    width: 500px;
-  }
-
-  .divFactorModal {
-    margin-top: 15px;
-    font-size: 20px;
-    /* display: flex;
-    justify-content: space-between;
-    gap: 10px; */
-    /* width: 200px; */
+    margin-top: 30px;
     font-weight: bold;
-    color: rgb(7, 134, 134);
-  }
-
-  .DivHeadTableModal {
-    display: flex;
-    background-color: rgb(247, 189, 114);
-    font-weight: 900;
+    /* font-size: 20px; */
     width: 500px;
-    font-family: "Vazir";
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
   }
 
-  .NameProductModal {
-    width: 60%;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
+  .divInputsLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* margin-top: 20px; */
   }
 
-  .PriceModal {
-    width: 20%;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
+  .inputsModal{
+    width: 220px;
+    display: block;
+    margin-top: 10px;
+    /* border: none; */
   }
 
-  .CounterModal {
-    width: 20%;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-  }
+
+
+
+
+
+
+
+
+
 
   .ButtenDeliveredModal {
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 20px;
     font-weight: bold;
-    /* display: flex;
-  justify-content: space-between; */
-    /* gap: 10px; */
-    /* width: 500px; */
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 10px;
-    color: rgb(47, 122, 3);
+    color: rgb(41, 99, 8);
     background: linear-gradient(
       86deg,
       rgba(253, 249, 141, 0.995) 0%,
@@ -143,63 +117,18 @@
     );
   }
 
-  .divDeliveredDate {
-    margin-top: 15px;
-    font-size: 20px;
+  .TextErrrorInputs{
+    color: rgb(255, 47, 47);
+    margin-top: 40px;
     font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    width: 300px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: rgb(72, 136, 35);
-    background: linear-gradient(
-      86deg,
-      rgba(253, 249, 141, 0.995) 0%,
-      rgba(119, 248, 229, 1) 50%,
-      rgb(244, 247, 163) 100%
-    );
   }
 
-  .DeliveringDiv {
-    margin-top: 15px;
-    font-size: 20px;
+  .TextSucsefullEnter{
+    color: rgb(34, 106, 241);
+    margin-top: 40px;
     font-weight: bold;
-
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: rgb(24, 99, 212);
   }
 
-  .DivFooterTable {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(204, 243, 200);
-    color: blue;
-    font-weight: 900;
-    font-size: 17px;
-    font-family: "Vazir";
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-
-  .SpanTotText {
-    width: 55%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .SpanTotPrice {
-    width: 45%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* .SpanTotCounter {
-    width: 25%;
-    padding: 10px;
-  } */
 
   /**/
   /* .divSubjectSection {
@@ -248,28 +177,6 @@
     box-shadow: 0px 0px 13px 9px rgba(247, 140, 175, 0.71); 
   } */
 
-  .TableSection {
-    margin-top: 15px;
-    padding: 0 50px;
-    overflow-y: scroll;
-    max-height: 200px;
-  }
-
-  .TableSection::-webkit-scrollbar {
-    width: 0;
-  }
-
-  .DivRowTables {
-    display: flex;
-    background-color: rgb(247, 215, 173);
-    font-family: "Vazir";
-  }
-
-  .DivRowOddTables {
-    display: flex;
-    background-color: rgb(248, 230, 212);
-    font-family: "Vazir";
-  }
 }
 
 /*************************************************/
