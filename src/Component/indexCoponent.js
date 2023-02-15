@@ -12,3 +12,4 @@ export { ModalProductRew } from "./ModalProductRew/ModalProductRew";
 export { GetDataFetch } from "./Functions/FanctionGetData";
 export { InfoCustomerModal } from "./InfoCostomerModal/InfoCostomerModal";
 export { NewCustomerModal } from "./NewCostomerModal/NewCostomerModal";
+export { SliderPageHome } from "./SliderPageHome/SliderPageHome"; 
