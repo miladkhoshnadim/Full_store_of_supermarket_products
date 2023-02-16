@@ -72,7 +72,10 @@ export const BascketBuyPage = () => {
       // const CostomerInfo = JSON.parse(localStorage.getItem("CostomerInfo"))
       setShowError([false, true, false, false]);
       SumationFactor();
-      const NTotPrice = JSON.parse(localStorage.getItem("BasketBuying")).reduce((a, b) => +a +( (+b.price) *(+ b.count)),0)
+      const NTotPrice = JSON.parse(localStorage.getItem("BasketBuying")).reduce(
+        (a, b) => +a + +b.price * +b.count,
+        0
+      );
       console.log("TotPrices", NTotPrice);
       fetch(ServiceProducts + `/users`, {
         method: "POST",

@@ -78,20 +78,33 @@
   .MainDisplay {
     display: flex;
     justify-content: center;
-
+    /* align-items: center; */
     width: 100%;
   }
 
   .MainFooterSection {
     display: flex;
     justify-content: right;
-    /* align-items: center; */
-    width: 320px;
-    border-radius: 5px;
-    background-color: rgb(116, 114, 114);
+    flex-direction: column;
+    width: 288px;
+    border-radius: 10px;
+    background: radial-gradient(
+      circle,
+      rgba(69, 240, 232, 1) 0%,
+      rgba(246, 239, 124, 1) 100%
+    );
+    /* background-color: rgb(116, 114, 114); */
     color: white;
-    height: 70px;
-    padding: 5px;
+    /* height: 130px; */
+    padding: 10px;
+    font-family: "Vazir";
+    font-size: 10px;
+  }
+
+  .DivContactInformation {
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
   }
 
   .DivFooterRight {
@@ -100,4 +113,41 @@
     flex-direction: column;
     width: 50%;
   }
+
+  .LocationIcon {
+    width: 15px;
+  }
+
+  .DivSingleInfo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 240px;
+  }
+
+  .SpanBackdrundInfo {
+    background: linear-gradient(
+      0deg,
+      rgba(123, 245, 116, 1) 0%,
+      rgba(247, 245, 60, 0.5046393557422969) 100%
+    );
+    padding: 5px;
+    font-size: 8px;
+    color: rgb(112, 69, 69);
+  }
+
+  .backgrundP {
+    background: linear-gradient(
+      86deg,
+      rgba(17, 247, 225, 1) 0%,
+      rgba(251, 246, 56, 0.804359243697479) 50%,
+      rgba(64, 252, 237, 1) 100%
+    );
+    padding: 5px;
+    text-align: justify;
+    color: rgb(112, 69, 69);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
 }

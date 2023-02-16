@@ -32,10 +32,10 @@ export const MainHeader = () => {
             <span className={styleHead.textIncoming}>
               
                 <span className={styleHead.ButtonManagement} onClick={()=>setNewCostomerModal(true)}>ثبت نام </span>{" "}
-              
+                <span className={styleHead.ButtonManagement}>
               <Link className="linkStyle" to={`/ManagementLoginPage`}>
-                <span className={styleHead.ButtonManagement}>مدیریت</span>{" "}
-              </Link>
+                مدیریت{" "}
+              </Link></span>
             </span>
           </div>
         </div>

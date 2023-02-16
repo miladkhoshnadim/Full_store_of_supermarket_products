@@ -101,7 +101,7 @@
     width: 20px;
   }
 
-  .ButtonManagement{
+  .ButtonManagement {
     background: linear-gradient(
       86deg,
       rgba(148, 184, 180, 0) 0%,
@@ -113,12 +113,11 @@
     box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
   }
 
-.ButtonManagement:hover{
-  cursor: pointer;
-  font-size: 25px;
-  box-shadow: 0px 0px 10px 9px rgba(73, 71, 72, 0.71);
-}
-
+  .ButtonManagement:hover {
+    cursor: pointer;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px 9px rgba(73, 71, 72, 0.71);
+  }
 }
 
 /******************************************************/
@@ -130,54 +129,73 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 5px;
-    position: fixed;
+    /* position: fixed; */
   }
 
   .mainHead {
-    max-width: 400px;
-    /* height: 135px; */
-    background: #e0fff9;
+    width: 288px;
+    /* background: #e0fff9; */
+    background: radial-gradient(
+      circle,
+      rgba(247, 246, 95, 1) 0%,
+      rgba(142, 250, 205, 1) 100%
+    );
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    /* margin-top: 20px; */
-    /* gap: 1%; */
+    margin-top: 5px;
   }
 
   .divLeftHeader {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    direction: ltr;
     flex-direction: column;
-    grid-template-columns: 1rem;
-  }
+    }
 
   .personImg {
-    margin: 0 0.2em;
+    margin: 0 1em;
     width: 30px;
   }
 
   .textIncoming {
+    display: flex;
     font-family: "Vazir";
     font-style: normal;
     /* font-weight: 400; */
     font-size: 9px;
-    /* line-height: 24px; */
+    /* line-height: 44px; */
     color: #108a0d;
+    padding: 2px 8px;
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      rgba(185, 185, 251, 0.26094187675070024) 0%,
+      rgba(229, 244, 110, 0.19091386554621848) 45%,
+      rgba(135, 249, 135, 1) 100%
+    );
   }
 
   .LogoImg {
-    margin: 0 0.2em;
-    width: 60px;
+    margin: 0 2px;
+    width: 50px;
   }
 
   .TextLogo {
     font-family: "Vazir";
     font-style: normal;
     /* font-weight: 400;
-    font-size: 30.4161px; */
+    font-size: 18px; */
     color: #fd630d;
+    border-radius: 5px;
+    padding: 2px 5px;
+    background: linear-gradient(
+      86deg,
+      rgba(33, 246, 226, 0) 0%,
+      rgba(245, 245, 61, 1) 49%,
+      rgba(221, 246, 60, 0.3757878151260504) 100%
+    );
   }
 
   .divRightHeader {
@@ -187,18 +205,17 @@
   }
 
   .inputSearch {
-    width: 75%;
+    width: 240px;
     background: #f7faf9;
     border-radius: 5px;
     direction: rtl;
-    height: 0.9rem;
-    font-size: 0.5rem;
-    padding: 0 1rem;
+    height: 13px;
+    padding: 0 20px;
+    font-size: 9px;
   }
 
   .divInputSearch {
-    width: 320px;
-    margin-top: 0.3rem;
+    margin: 5px 0 0 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -206,8 +223,27 @@
 
   .SearchImg {
     position: absolute;
-    right: 1.7rem;
-    top: 0.2rem;
-    width: 0.7rem;
+    right: 8px;
+    top: 3px;
+    width: 12px;
+  }
+
+  .ButtonManagement {
+    background: linear-gradient(
+      86deg,
+      rgba(148, 184, 180, 0) 0%,
+      rgb(209, 209, 122) 49%,
+      rgba(170, 236, 203, 0.376) 100%
+    );
+    border-radius: 10px;
+    margin: 5px 3px;
+    font-size: 7px;
+    box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
+  }
+
+  .ButtonManagement:hover {
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 0px 0px 10px 9px rgba(73, 71, 72, 0.71);
   }
 }

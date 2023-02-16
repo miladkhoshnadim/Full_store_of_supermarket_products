@@ -100,12 +100,13 @@
 /****************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
+ 
   .divMainFooter {
     display: flex;
     justify-content: center;
     width: 100%;
     position: fixed;
-    bottom: 5px;
+    bottom: 0px;
   }
 
   .MainFooter {
@@ -113,26 +114,102 @@
     justify-content: space-between;
     width: 280px;
     height: 50px;
-    background: #e0fff9;
+    /* background: #e0fff9; */
+    background: linear-gradient(
+      86deg,
+      rgba(177, 246, 231, 1) 0%,
+      rgba(245, 245, 61, 0.6979166666666667) 25%,
+      rgba(177, 246, 231, 1) 50%,
+      rgba(245, 245, 61, 0.7035189075630253) 75%,
+      rgba(177, 246, 231, 1) 100%
+    );
+    border-radius: 15px;
+  }
+
+
+  .divModalFooterCategorys {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 51px;
+  }
+
+  .ModalFooterCategorys {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 210px;
+    min-height: 60px;
+    font-family: "Vazir";
+    font-size: 12px;
+    font-weight: 900;
+    background: linear-gradient(
+      86deg,
+      rgba(217, 240, 243, 0.798) 0%,
+      rgba(209, 235, 216, 0.798) 25%,
+      rgba(177, 246, 231, 0.75) 50%,
+      rgba(214, 231, 208, 0.704) 75%,
+      rgba(230, 241, 239, 0.704) 100%
+    );
+    border-radius: 15px;
+    padding: 10px 30px;
+  }
+
+  .MFSingleCategorys {
+    cursor: pointer;
+    background-color: aquamarine;
     border-radius: 5px;
+    min-width: 200px;
+    text-align: center;
+    padding: 5px 0;
+    color: rgb(8, 8, 155);
   }
 
   .iconsMain {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 0.8rem;
+    padding: 0 12px;
   }
 
   .textIcon {
     font-family: "Vazir";
     font-style: normal;
-    /* font-weight: 400; */
+    font-weight: 400;
     font-size: 10px;
+    /* font-size: 20px; */
   }
 
   .IconsImg {
     width: 20px;
   }
+
+  .NotificationBasket {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(248, 69, 69);
+    padding: 1px 3px;
+    /* font-size: 18px; */
+    font-size: 9px;
+    font-weight: bold;
+    color: white;
+    top: -30px;
+    left: 30px;
+  }
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
 }

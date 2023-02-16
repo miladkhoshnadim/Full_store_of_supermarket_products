@@ -8,7 +8,7 @@ import { contexInfo } from "../context/Contex";
 
 export const MainFooter = () => {
   const [ShoCategorys, setShoCategorys] = useState(false);
- 
+
   const Info = useContext(contexInfo);
 
   // useEffect(() => {
@@ -73,6 +73,7 @@ export const MainFooter = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
