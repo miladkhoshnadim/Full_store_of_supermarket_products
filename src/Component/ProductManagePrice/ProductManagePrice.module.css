@@ -320,10 +320,10 @@
   }
 
   .PaginationDivError {
-    width: 300px;
+    width: 200px;
     text-align: center;
-    margin: 20px 33% 0;
-    padding: 10px 20px;
+    margin: 20px 30px 0;
+    padding: 5px 10px;
     font-weight: bold;
     font-family: "Vazir";
     color: rgb(240, 18, 18);
@@ -343,13 +343,13 @@
   }
 
   .divLoding {
-    margin: 100px 300px 0 0;
+    margin: 100px 120px 0 0;
     width: 200px;
     text-align: center;
     background-color: rgb(127, 240, 240);
     border-radius: 10px;
     padding: 5px 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     color: rgb(105, 85, 194);
   }
@@ -357,8 +357,8 @@
   .ErrorsDiv {
     display: flex;
     justify-content: space-between;
-    width: 400px;
-    margin: 20px 20% 0;
+    width: 20px;
+    margin: 20px 20px 0;
     padding: 10px 20px;
     font-weight: bold;
     font-family: "Vazir";

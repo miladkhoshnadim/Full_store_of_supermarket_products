@@ -15,14 +15,14 @@ export const ProductManagementPage = () => {
   // const [DataProduct, setDataProduct] = useState([]);
   // const [DataOrders, setDataOrders] = useState([]);
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   setTimeout(() => {
-  //     localStorage.removeItem("userManagement");
-  //   }, 60000);
+    setTimeout(() => {
+      localStorage.removeItem("userManagement");
+    }, 60000);
     
-  //   // getData(5);
-  // }, []);
+    // getData(5);
+  }, []);
 
   // function getData(Limit = 10, Page = 1, addres = "/Products") {
   //   fetch(ServiceProducts + `${addres}?_page=${Page}&_limit=${Limit}`)

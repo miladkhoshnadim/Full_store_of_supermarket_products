@@ -180,31 +180,6 @@
     background-color: rgb(248, 221, 221);
   }
 
-  /*********/
-
-  /* .SpanRewOrder {
-    cursor: pointer;
-    width: 20%;
-    padding: 10px;
-
-    align-items: center;
-    text-align: center;
-  } */
-
-  /* .MoreInfoImg:hover {
-    width: 25px;
-    background: linear-gradient(
-      86deg,
-      rgba(243, 205, 123, 0.995) 0%,
-      rgb(147, 247, 144) 50%,
-      rgb(243, 194, 122) 100%
-    );
-    border-radius: 10px;
-    padding: 2px 5px;
-    background-color: aqua;
-    box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71);
-  } */
-
   .DivRowTables {
     display: flex;
     background-color: rgb(247, 215, 173);
@@ -216,45 +191,6 @@
     background-color: rgb(248, 230, 212);
     font-family: "Vazir";
   }
-
-  /* .PaginationDiv {
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-    margin: 20px 40% 0;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-family: "Vazir";
-    background: linear-gradient(
-      86deg,
-      rgba(253, 249, 141, 0.995) 0%,
-      rgba(119, 248, 229, 1) 50%,
-      rgb(244, 247, 163) 100%
-    );
-  } */
-
-  /* .PaginationDivError {
-    width: 300px;
-    text-align: center;
-    margin: 20px 33% 0;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-family: "Vazir";
-    color: rgb(240, 18, 18);
-    background: linear-gradient(
-      86deg,
-      rgba(253, 249, 141, 0.995) 0%,
-      rgba(119, 248, 229, 1) 50%,
-      rgb(244, 247, 163) 100%
-    );
-  }*/
-
-  /* .PaginationBotton:hover { 
-    cursor: pointer;
-    background-color: rgb(246, 250, 6);
-    font-size: 15px;
-    color: red;
-  } */
 
   .divLoding {
     margin: 100px 300px 0 0;
@@ -272,4 +208,215 @@
 /*************************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
+  .divMainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding-top: 10px; */
+  }
+
+  .DivmainSection {
+    width: 286px;
+    border-radius: 15px;
+    /* overflow-y: scroll; */
+    padding: 0px 0 45px;
+  }
+
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Vazir";
+    flex-direction: column;
+  }
+
+  .textBascketOrder {
+    font-weight: 900;
+    font-size: 22px;
+    color: rgb(10, 161, 248);
+    margin: 10px 0;
+  }
+
+  .textAprowContinue {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(9, 9, 170);
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(
+      86deg,
+      rgba(245, 236, 161, 0.995) 0%,
+      rgb(165, 243, 163) 50%,
+      rgb(236, 247, 141) 100%
+    );
+    box-shadow: 0px 0px 5px 2px rgba(180, 151, 166, 0.71);
+  }
+
+  .textAprowContinue:hover {
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71);
+  }
+
+  .TableSection {
+    margin-top: 10px;
+    /* padding: 0 50px 70px; */
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 700;
+    font-size: 12px;
+    font-family: "Vazir";
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .SpanNameRows {
+    font-size: 12px;
+    width: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanImg {
+    font-size: 12px;
+    width: 15%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanNameProduct {
+    font-size: 12px;
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanPriceFactor {
+    font-size: 12px;
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanCountProduct {
+    font-size: 12px;
+    width: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanOperator {
+    font-size: 12px;
+    width: 15%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ImgTrashOperator:hover {
+    box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71);
+    background-color: rgb(250, 194, 194);
+    width: 25px;
+    cursor: pointer;
+  }
+
+  .ImgTrashOperator {
+    width: 20px;
+  }
+
+  .ImgProduct {
+    width: 30px;
+    /* box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71); */
+  }
+
+  .DivFooterTable {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(204, 243, 200);
+    color: blue;
+    font-weight: 900;
+    font-size: 12px;
+    font-family: "Vazir";
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .SpanTotText {
+    width: 55%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .SpanTotPrice {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .SpanTotCounter {
+    width: 25%;
+    padding: 10px;
+  }
+
+  .DivConfirmDelete {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 10px 20px 20px 0px;
+    font-weight: bold;
+    font-family: "Vazir";
+    font-size: 15px;
+    color: rgb(255, 0, 13);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(248, 221, 221);
+  }
+
+  .DivRowTables {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .DivRowOddTables {
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+
+  .divLoding {
+    margin: 100px 40px 0 0;
+    width: 170px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
 }

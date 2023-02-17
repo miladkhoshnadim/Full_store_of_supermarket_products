@@ -45,15 +45,21 @@ export const BascketBuyPage = () => {
 
   function HandelRemoveProduct() {
     BasketInventory = [...Products];
-    // console.log("!@#bef", BasketInventory);
+    console.log("!@#bef", BasketInventory);
     BasketInventory.splice(ItemRemove, 1);
-    // console.log("!@#next", BasketInventory);
+    console.log("!@#next", BasketInventory);
     // BacketInventory
-    Info.setBacketInventory(BasketInventory);
+    // Info.setBacketInventory(BasketInventory);
     setProducts(BasketInventory);
-    localStorage.setItem("BasketBuying ", JSON.stringify(BasketInventory));
+    // localStorage.setItem("BasketBuying ", JSON.stringify(BasketInventory));
     // setProducts(BasketInventory);
+    // console.log('localSet',JSON.parse(localStorage.getItem("BasketBuying")) )
+    // console.log('BacketInventory', Info.BacketInventory)
     setModifyDeletedShow(false);
+
+    Info.setBacketInventory(BasketInventory);
+    localStorage.setItem("BasketBuying", JSON.stringify(BasketInventory));
+  
   }
 
   function ChengeBascketInventory() {

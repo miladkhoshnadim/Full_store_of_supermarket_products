@@ -17,7 +17,7 @@ export const CardProduct = ({ item, group }) => {
   }, [counter]);
 
   function HandelBasketInventory() {
-    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying"));
+    BasketInventory = JSON.parse(localStorage.getItem("BasketBuying")) || [];
     const BasketProductindex = BasketInventory.findIndex(
       (x) => x.id == +item.id
     );
