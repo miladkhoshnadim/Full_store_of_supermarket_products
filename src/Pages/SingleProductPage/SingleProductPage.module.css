@@ -110,7 +110,6 @@
     border-radius: 15px;
     background-color: rgb(240, 81, 142);
     box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
- 
   }
 
   .PlusSpan {
@@ -119,7 +118,7 @@
 
   .PlusSpan:hover {
     box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
- 
+
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 15px;
@@ -132,6 +131,148 @@
     font-style: normal;
     font-size: 20px;
     font-weight: 600;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .DivInventoryPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Vazir";
+  }
+}
+
+/*************************************************/
+
+@media all and (min-width: 320px) and (max-width: 1030px) {
+  .infinityDivDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .MainDivDisplay {
+    width: 286px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    /* padding: 139px 0 65px; */
+    padding: 0px 0 40px;
+    min-height: 300px;
+  }
+
+  .MainDivDisplay::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .SubjectPage {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 900;
+    padding: 1px 5px;
+    color: #16cef7;
+    font-size: 20px;
+    margin: 1px 0 10px;
+  }
+
+  .MainSingleProductDiv {
+    border-radius: 15px;
+    background-color: #f1fff4;
+    padding: 10px;
+  }
+
+  .DivImg {
+    /* padding: 5px 30px 10px 50px; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ImgProduct {
+    width: 200px;
+    border-radius: 25px;
+  }
+
+  .ImgSubjectProductDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ExplainProductDiv {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .LabelProduct {
+    font-family: "Vazir";
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+
+  .PriceProduct {
+    font-family: "Vazir";
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+
+  .CounterDiv {
+    font-size: 16px;
+    font-weight: 900;
+    width: 100px;
+    border-radius: 25px;
+    background: linear-gradient(
+      90deg,
+      rgba(250, 100, 106, 1) 0%,
+      rgba(90, 246, 62, 1) 100%
+    );
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0px 5px; */
+  }
+
+  .CounterNumber {
+    background-color: white;
+    padding: 10px;
+  }
+
+  .MinesSpan {
+    padding: 0 5px 10px;
+  }
+
+  .MinesSpan:hover {
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: rgb(240, 81, 142);
+    box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
+  }
+
+  .PlusSpan {
+    padding: 2px 5px;
+  }
+
+  .PlusSpan:hover {
+    box-shadow: 0px 0px 5px 2px rgba(73, 71, 72, 0.71);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgb(89, 235, 84);
+  }
+
+  .ExplainProductExactly {
+    padding: 5px 10px;
+    font-family: "Vazir";
+    font-style: normal;
+    /* font-size: 20px; */
+    /* font-weight: 600; */
     text-align: justify;
     line-height: 1.5;
   }

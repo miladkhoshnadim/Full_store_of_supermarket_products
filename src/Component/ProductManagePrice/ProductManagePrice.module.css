@@ -13,13 +13,12 @@
     color: rgb(10, 161, 248);
   }
 
-.InputSearchProduct{
-  background-color: inherit;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid rgb(46, 235, 235);
-}
-
+  .InputSearchProduct {
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
 
   .textPutProduct {
     font-weight: 900;
@@ -34,7 +33,7 @@
     );
   }
 
-  .textPutProduct:hover{
+  .textPutProduct:hover {
     cursor: pointer;
     font-size: 20px;
     background: linear-gradient(
@@ -155,20 +154,20 @@
     color: red;
   }
 
-.divLoding{
-  margin: 100px 300px 0 0;
-  width: 200px;
-  text-align: center;
-  background-color: rgb(127, 240, 240);
-  border-radius: 10px;
-  padding: 5px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(105, 85, 194);
-}
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
 
-.ErrorsDiv{
-  display: flex;
+  .ErrorsDiv {
+    display: flex;
     justify-content: space-between;
     width: 400px;
     margin: 20px 20% 0;
@@ -182,11 +181,193 @@
       rgb(246, 248, 119) 50%,
       rgb(163, 230, 247) 100%
     );
-}
-
+  }
 }
 
 /*************************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: "Vazir";
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .textManageProduct {
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(10, 161, 248);
+  }
+
+  .InputSearchProduct {
+    font-size: 8px;
+    width: 160px;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
+
+  .textPutProduct {
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .textPutProduct:hover {
+    cursor: pointer;
+    font-size: 20px;
+    background: linear-gradient(
+      86deg,
+      rgba(39, 255, 11, 0.995) 0%,
+      rgb(64, 245, 218) 50%,
+      rgb(30, 248, 48) 100%
+    );
+  }
+
+  .TableSection {
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 800;
+    font-size: 14px;
+    font-family: "Vazir";
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .SpanNameProducts {
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .SpanPriceProducts {
+    width: 25%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .DivRowTables {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .inputPriceProduct {
+    width: 25%;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    margin: 0px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(252, 54, 103);
+  }
+
+  ::-webkit-input-placeholder {
+    color: rgb(90, 65, 71);
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .DivRowOddTables {
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+
+  .PaginationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 40px 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationDivError {
+    width: 300px;
+    text-align: center;
+    margin: 20px 33% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: rgb(240, 18, 18);
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationBotton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 250, 6);
+    font-size: 15px;
+    color: red;
+  }
+
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
+
+  .ErrorsDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 20px 20% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(167, 253, 141, 0.995) 0%,
+      rgb(246, 248, 119) 50%,
+      rgb(163, 230, 247) 100%
+    );
+  }
 }

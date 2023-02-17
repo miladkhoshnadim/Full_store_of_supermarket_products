@@ -198,4 +198,205 @@
 /*************************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 5px;
+    font-family: "Vazir";
+  }
+
+  .textManageProduct {
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(10, 161, 248);
+  }
+
+  .InputSearchProduct {
+    width: 50px;
+    font-size: 8px;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
+
+  .textPutProduct {
+    font-weight: 700;
+    font-size: 8px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .textPutProduct:hover {
+    font-size: 11px;
+    cursor: pointer;
+    background: linear-gradient(
+      86deg,
+      rgba(141, 253, 147, 0.995) 0%,
+      rgb(225, 250, 84) 50%,
+      rgb(180, 247, 163) 100%
+    );
+  }
+
+  .TableSection {
+    margin-top: 5px;
+    padding: 0 10px;
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: "Vazir";
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .SpanImgProduct {
+    width: 10%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanNameProduct {
+    width: 45%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .SpanCategoryProduct {
+    width: 25%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .SpanEditProduct {
+    width: 20%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* .buttenEditProduct{
+  text-align: center;
+  display: flex;
+} */
+
+  .TrashImg {
+    width: 10px;
+  }
+
+  .TrashImg:hover {
+    font-size: 11px;
+    cursor: pointer;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: linear-gradient(
+      86deg,
+      rgba(141, 253, 147, 0.995) 0%,
+      rgb(225, 250, 84) 50%,
+      rgb(180, 247, 163) 100%
+    );
+  }
+
+  .DivRowTable {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .DivRowOddTable {
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+
+  .ImgProduct {
+    width: 20px;
+  }
+
+  .PaginationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 50px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: "Vazir";
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationDivError {
+    width: 300px;
+    text-align: center;
+    margin: 20px 33% 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: rgb(240, 18, 18);
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationBotton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 250, 6);
+    font-size: 15px;
+    color: red;
+  }
+
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
+
+  .DivConfirmDelete {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 10px 80px 20px 0px;
+    font-weight: bold;
+    font-family: "Vazir";
+    font-size: 15px;
+    color: rgb(255, 0, 13);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(248, 221, 221);
+  }
 }

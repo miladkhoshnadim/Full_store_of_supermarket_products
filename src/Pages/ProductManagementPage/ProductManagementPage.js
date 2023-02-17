@@ -14,14 +14,15 @@ export const ProductManagementPage = () => {
   const [treeSection, setTreeSection] = useState([false, false, true]);
   // const [DataProduct, setDataProduct] = useState([]);
   // const [DataOrders, setDataOrders] = useState([]);
-  useEffect(() => {
 
-    setTimeout(() => {
-      localStorage.removeItem("userManagement");
-    }, 60000);
+  // useEffect(() => {
+
+  //   setTimeout(() => {
+  //     localStorage.removeItem("userManagement");
+  //   }, 60000);
     
-    // getData(5);
-  }, []);
+  //   // getData(5);
+  // }, []);
 
   // function getData(Limit = 10, Page = 1, addres = "/Products") {
   //   fetch(ServiceProducts + `${addres}?_page=${Page}&_limit=${Limit}`)
@@ -60,7 +61,7 @@ export const ProductManagementPage = () => {
               <img className={ProductManagementStyle.HomeImg} src={Homeimg} />
               <Link className="linkStyle" to={`/`}>
               <span className={ProductManagementStyle.textIncoming}>
-                بازگشت به سایت
+                 سایت اصلی
               </span>
             </Link>
           </div>

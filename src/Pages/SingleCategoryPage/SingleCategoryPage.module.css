@@ -73,29 +73,75 @@
 /*************************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
-  .MainDisplay {
+  .MainSection {
     display: flex;
     justify-content: center;
-
+    align-items: center;
     width: 100%;
+    /* padding-top: 15px; */
   }
 
-  .MainFooterSection {
-    display: flex;
-    justify-content: right;
-    /* align-items: center; */
-    width: 320px;
-    border-radius: 5px;
-    background-color: rgb(116, 114, 114);
-    color: white;
-    height: 70px;
-    padding: 5px;
+  .MainPageSection {
+    width: 286px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    /* padding: 139px 0 65px; */
+    padding: 0px 0 40px;
+   
   }
 
-  .DivFooterRight {
+  .MainPageSection::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .subjectCategory {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 900;
+
+    color: #16cef7;
+    font-size: 17px;
+    /* cursor: pointer; */
+  }
+
+  .ProductsSection {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #f1fff4;
+    padding: 10px;
+    /* min-height: 400px; */
+  }
+
+  .LableSortingsDiv {
+    display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: space-between;
+    margin: 5px 0 10px;
+  }
+
+  .SelectSortingDiv {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    /* width: 50%; */
+  }
+
+  .SelectSorting {
+    /* font-size: 15px; */
+    font-weight: 600;
+    padding: 3px 20px;
+    /* background-color: blanchedalmond; */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+      86deg,
+      rgba(197, 203, 250, 0.577468487394958) 0%,
+      rgba(241, 219, 219, 1) 51%,
+      rgba(138, 249, 248, 0.3757878151260504) 100%
+    );
   }
 }

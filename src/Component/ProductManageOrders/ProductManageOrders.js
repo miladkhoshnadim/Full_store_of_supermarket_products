@@ -67,7 +67,7 @@ export const ProductManageOrdersSection = () => {
           placeholder="جست و جو "
           onChange={(e) => HandelSerchProduct(e)}
         />
-        <div>
+        <div className={ProductManageOrdersstyle.DivOrderCondition}>
           <span
             onClick={() => setOrderDelivery(true)}
             className={

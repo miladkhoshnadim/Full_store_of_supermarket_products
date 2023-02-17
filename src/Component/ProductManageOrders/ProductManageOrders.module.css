@@ -194,4 +194,208 @@
 /*************************************************/
 
 @media all and (min-width: 320px) and (max-width: 1030px) {
+  .divSubjectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: "Vazir";
+    flex-direction: column;
+  }
+
+  .textManageOrder {
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(10, 161, 248);
+    margin: 5px 0;
+  }
+
+  .InputSearchOrder {
+    /* width: 60px; */
+    margin: 5px 0;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(46, 235, 235);
+  }
+
+  .DivOrderCondition{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textDeliverOrder {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin: 5px 0;
+    /* margin-right: 30px; */
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .textDeliverOrder:hover {
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 9px rgba(73, 71, 72, 0.71);
+  }
+
+  .textDeliverOrderActiv {
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin: 5px 0;
+    /* margin-right: 30px; */
+    color: blue;
+    background: linear-gradient(
+      86deg,
+      rgba(29, 245, 65, 0.995) 0%,
+      rgb(58, 250, 52) 50%,
+      rgb(34, 245, 27) 100%
+    );
+    box-shadow: 0px 0px 13px 9px rgba(247, 140, 175, 0.71); /* border: 5px solid red; */
+  }
+
+  .TableSection {
+    margin-top: 5px;
+    padding: 0 5px;
+  }
+
+  .DivHeadTable {
+    display: flex;
+    background-color: rgb(247, 189, 114);
+    font-weight: 700;
+    font-size: 11px;
+    font-family: "Vazir";
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .SpanNameCustomer {
+    font-size: 10px;
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanTimeOrder {
+    font-size: 10px;
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanPriceFactor {
+    font-size: 10px;
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpanRewOrder {
+    cursor: pointer;
+    width: 20%;
+    padding: 10px;
+    font-size: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .MoreInfoImg {
+    width: 15px;
+    /* box-shadow: 0px 0px 5px 2px rgba(53, 17, 35, 0.71); */
+  }
+
+  .MoreInfoImg:hover {
+    width: 20px;
+    background: linear-gradient(
+      86deg,
+      rgba(243, 205, 123, 0.995) 0%,
+      rgb(147, 247, 144) 50%,
+      rgb(243, 194, 122) 100%
+    );
+    border-radius: 5px;
+    padding: 2px 5px;
+    /* background-color: aqua; */
+    /* box-shadow: 0px 0px 10px 9px rgba(48, 36, 42, 0.71); */
+  }
+
+  .DivRowTables {
+    display: flex;
+    background-color: rgb(247, 215, 173);
+    font-family: "Vazir";
+  }
+
+  .DivRowOddTables {
+    display: flex;
+    background-color: rgb(248, 230, 212);
+    font-family: "Vazir";
+  }
+
+  .PaginationDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 40px 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: "Vazir";
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationDivError {
+    width: 200px;
+    text-align: center;
+    margin: 20px 30px 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: "Vazir";
+    color: rgb(240, 18, 18);
+    background: linear-gradient(
+      86deg,
+      rgba(253, 249, 141, 0.995) 0%,
+      rgba(119, 248, 229, 1) 50%,
+      rgb(244, 247, 163) 100%
+    );
+  }
+
+  .PaginationBotton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 250, 6);
+    font-size: 15px;
+    color: red;
+  }
+
+  .divLoding {
+    margin: 100px 300px 0 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(127, 240, 240);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(105, 85, 194);
+  }
 }
